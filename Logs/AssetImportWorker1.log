@@ -250,3 +250,55 @@ Received Import Request.
 Start importing Assets/Sprites/New Piskel (57).png using Guid(0aa26b5eeec13424f82b015d719c47bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c8c07f4e5e50f30ac6d9dead7ff95ae2') in 0.0240811 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
+========================================================================
+Received Import Request.
+  Time since last request: 1238.197956 seconds.
+  path: Assets/Prefabs/Button.prefab
+  artifactKey: Guid(51a0f55813c7b494aad70d995f5e8592) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Button.prefab using Guid(51a0f55813c7b494aad70d995f5e8592) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e5e52abf482f83f5ee7e246a35cde301') in 0.0442695 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Prefabs/Finish.prefab
+  artifactKey: Guid(46458477160aeba48a473cdbf8dadf60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Finish.prefab using Guid(46458477160aeba48a473cdbf8dadf60) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'be79ea3532552815d7257cda60002df2') in 0.0170867 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(e118eed328a450a4b93ce7e077a4ec0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(e118eed328a450a4b93ce7e077a4ec0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c68445d87b55672e83b54503742ca9be') in 0.0241992 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 56
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Prefabs/ShadowHistory.prefab
+  artifactKey: Guid(49dc20bb3e52e0844ae27667a3d60a26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ShadowHistory.prefab using Guid(49dc20bb3e52e0844ae27667a3d60a26) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0589c73b749402750d5b41db77d0e2f1') in 0.0197266 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Prefabs/Ground.prefab
+  artifactKey: Guid(fe9df0dae3ca542458885b0744b9eb2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Ground.prefab using Guid(fe9df0dae3ca542458885b0744b9eb2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1ea9d1e5e6415105849260e5218e3ba9') in 0.0303862 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.285523 seconds.
+  path: Assets/Sound/jump (3).wav
+  artifactKey: Guid(27f4dc3579bb88f4cb841f116a2ed9f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sound/jump (3).wav using Guid(27f4dc3579bb88f4cb841f116a2ed9f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c36b11de10e4b96270d331cec4926e16') in 0.0384914 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

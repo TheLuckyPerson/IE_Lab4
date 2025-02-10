@@ -1,0 +1,4 @@
+repository "2DPlatformer/lab3@3526169@cloud"
+  path "/"
+    br "/main"
+    co "/main"
