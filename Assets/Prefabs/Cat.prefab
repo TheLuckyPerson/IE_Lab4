@@ -283,7 +283,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: b91ff592f2e85414b869deddc175fa2f, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -390,6 +390,7 @@ MonoBehaviour:
   isShadow: 1
   inputStatesHistory: []
   startPos: {x: 0, y: 0}
+  offset: {x: 0, y: -0.5}
   cloneTimerLimit: 5
   currentCloneTimer: 0
   jumpSound: {fileID: 376597822034076086}

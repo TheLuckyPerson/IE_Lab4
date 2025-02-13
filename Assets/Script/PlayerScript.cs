@@ -60,6 +60,7 @@ public class PlayerScript : MonoBehaviour
     public bool isShadow = false;
     public List<InputStates> inputStatesHistory = new List<InputStates>();
     public Vector2 startPos;
+    public Vector2 offset = new Vector2(0, -.5f);
     public float cloneTimerLimit = 5f;
     public float currentCloneTimer = 0f;
 
@@ -103,7 +104,7 @@ public class PlayerScript : MonoBehaviour
                 {
                     GameObject g = Instantiate(shadowHistoryPrefab, transform.position, Quaternion.identity);
                     SpriteRenderer sp = g.GetComponent<SpriteRenderer>();
-                    sp.sprite = spriteRenderer.sprite;
+                    // sp.sprite = spriteRenderer.sprite;
                     sp.flipX = facing == -1f;
                     currentInputState.spawnedObj = g.gameObject;
                     shadowCountdown = shadowTimer;
@@ -146,7 +147,7 @@ public class PlayerScript : MonoBehaviour
             DoMovement();
             spriteRenderer.flipX = facing == -1f;
             DoJump();
-            DoDash();
+            // DoDash();
 
             if (!isGrounded && rb2d.linearVelocity.y <= 0)
             {
@@ -173,12 +174,22 @@ public class PlayerScript : MonoBehaviour
         }
 
         // reset button or death by falling off
-        if (Input.GetKeyDown("r") || transform.position.y < -5f && !isShadow)
+        if (Input.GetKeyDown("r"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
+        if (transform.position.y < -5f)
+        {
+            KillPlayer();
+        }
+
         prevGroundState = isGrounded;
+    }
+
+    void KillPlayer()
+    {
+        transform.position = startPos;
     }
 
     void DoCloneTimer()
@@ -217,7 +228,7 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetButtonDown("Spawn") && !cloneExists)
         {
             spawnSound.Play();
-            PlayerScript ps = Instantiate(shadowPrefab, startPos, Quaternion.identity);
+            PlayerScript ps = Instantiate(shadowPrefab, startPos - offset, Quaternion.identity);
             for (int i = 0; i < inputStatesHistory.Count; i++)
             {
                 ps.inputStatesHistory.Add(inputStatesHistory[i]);
