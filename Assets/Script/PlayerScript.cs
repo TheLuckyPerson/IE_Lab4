@@ -314,7 +314,12 @@ public class PlayerScript : MonoBehaviour
     {
         if (col.gameObject.tag == "Finish")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            int buildIdx = SceneManager.GetActiveScene().buildIndex + 1;
+            if (buildIdx >= SceneManager.sceneCountInBuildSettings)
+            {
+                buildIdx = 0;
+            }
+            SceneManager.LoadScene(buildIdx);
         }
     }
 }
