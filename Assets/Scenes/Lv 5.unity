@@ -1925,6 +1925,7 @@ MonoBehaviour:
   isShadow: 0
   inputStatesHistory: []
   startPos: {x: 0, y: 0}
+  offset: {x: 0, y: -0.5}
   cloneTimerLimit: 60
   currentCloneTimer: 0
   jumpSound: {fileID: 579924725}
