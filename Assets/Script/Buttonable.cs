@@ -1,7 +1,7 @@
 using JetBrains.Annotations;
 using UnityEngine;
 
-public class Buttonable
+public class Buttonable : MonoBehaviour
 {
     public bool reverseActivation = false;
 
