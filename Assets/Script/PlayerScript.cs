@@ -67,6 +67,8 @@ public class PlayerScript : MonoBehaviour
     [Header("Animator")]
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    [Header("Platform")]
+    public LayerMask platformLayer;
 
     [Header("Sound")]
     public AudioSource jumpSound;
@@ -76,6 +78,8 @@ public class PlayerScript : MonoBehaviour
     bool isPaused = false;
     bool stopRecording = false;
     Vector2 prevVelocity;
+    public bool hasMoved = false;
+    Vector2 parentVector = Vector2.zero;
 
     // Start is called before the first frame update
     void Start()
@@ -89,14 +93,22 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isShadow)
-        {
+        isGrounded = IsGrounded(groundLayer);
 
+        if (!isShadow)
+        {  // record inputs
             currentInputState.xDir = Input.GetAxis("Horizontal");
             currentInputState.jump = Input.GetButtonDown("Jump");
             currentInputState.dash = Input.GetButtonDown("Dash");
 
-            if (!stopRecording)
+            if ((currentInputState.xDir != 0 || currentInputState.jump || currentInputState.dash) && !hasMoved)
+            {
+                startPos = transform.position;
+                hasMoved = true;
+            }
+
+            // spawn shadows
+            if (!stopRecording && hasMoved)
             {
                 shadowCountdown -= Time.deltaTime;
 
@@ -140,7 +152,8 @@ public class PlayerScript : MonoBehaviour
             }
         }
 
-        isGrounded = IsGrounded();
+        DoPlatformUpdates();
+
 
         if (state == PlayerState.normal)
         {
@@ -187,6 +200,22 @@ public class PlayerScript : MonoBehaviour
         prevGroundState = isGrounded;
     }
 
+    void DoPlatformUpdates()
+    {
+        RaycastHit2D hit = IsGrounded(platformLayer);
+        if (hit)
+        {
+            Rigidbody2D rbTarget = hit.transform.gameObject.GetComponent<Rigidbody2D>();
+            parentVector = rbTarget.linearVelocity;
+            rb2d.mass = .01f;
+        }
+        else
+        {
+            rb2d.mass = 1f;
+            parentVector = Vector2.zero;
+        }
+    }
+
     void KillPlayer()
     {
         transform.position = startPos;
@@ -212,6 +241,8 @@ public class PlayerScript : MonoBehaviour
                 isPaused = false;
                 rb2d.linearVelocity = prevVelocity;
                 rb2d.gravityScale = 1f;
+                rb2d.mass = 1;
+
             }
             else
             {
@@ -219,16 +250,17 @@ public class PlayerScript : MonoBehaviour
                 prevVelocity = rb2d.linearVelocity;
                 rb2d.linearVelocity = Vector2.zero;
                 rb2d.gravityScale = 0f;
+                rb2d.mass = 1000;
             }
         }
     }
 
     void DoSpawn()
     {
-        if (Input.GetButtonDown("Spawn") && !cloneExists)
+        if (Input.GetButtonDown("Spawn") && !cloneExists && hasMoved)
         {
             spawnSound.Play();
-            PlayerScript ps = Instantiate(shadowPrefab, startPos - offset, Quaternion.identity);
+            PlayerScript ps = Instantiate(shadowPrefab, startPos + offset, Quaternion.identity);
             for (int i = 0; i < inputStatesHistory.Count; i++)
             {
                 ps.inputStatesHistory.Add(inputStatesHistory[i]);
@@ -239,17 +271,20 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    bool IsGrounded()
+    RaycastHit2D IsGrounded(LayerMask layer)
     {
+        RaycastHit2D hit;
+        hit = Physics2D.Raycast(groundDetectors[0].position, Vector2.down, .05f, layer);
         foreach (Transform t in groundDetectors)
         {
-            if (Physics2D.Raycast(t.position, Vector2.down, .05f, groundLayer))
+            hit = Physics2D.Raycast(t.position, Vector2.down, .05f, layer);
+            if (hit)
             {
-                return true;
+                return hit;
             }
         }
 
-        return false;
+        return hit;
     }
 
     void DoMovement()
@@ -265,7 +300,14 @@ public class PlayerScript : MonoBehaviour
         {
             animator.Play("Idle");
         }
-        rb2d.linearVelocity = new Vector2(xDir * speed, rb2d.linearVelocity.y);
+
+        Vector2 additive = parentVector;
+        if (additive.y == 0 || rb2d.linearVelocity.y != 0)
+        {
+            additive.y = rb2d.linearVelocity.y;
+        }
+
+        rb2d.linearVelocity = new Vector2(xDir * speed + additive.x, additive.y);
 
     }
 
