@@ -47,11 +47,11 @@ public class Button : MonoBehaviour
         {
             if (isOn)
             {
-                g.TurnOn();
+                g.TriggerTurnOn();
             }
             else
             {
-                g.TurnOff();
+                g.TriggerTurnOff();
             }
         }
     }
