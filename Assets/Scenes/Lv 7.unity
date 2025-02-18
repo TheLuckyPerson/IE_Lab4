@@ -176,11 +176,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0769ae23deecfa46b96d9c6a7e2a1cc, type: 3}
---- !u!1 &812750614 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2680169856615825284, guid: b0769ae23deecfa46b96d9c6a7e2a1cc, type: 3}
+--- !u!114 &812750615 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5218740256965159325, guid: b0769ae23deecfa46b96d9c6a7e2a1cc, type: 3}
   m_PrefabInstance: {fileID: 424662775}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde2d917d472e194989a11c5eb58ba29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &865666034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8040,7 +8046,7 @@ PrefabInstance:
     - target: {fileID: 8006703114021575603, guid: faab2973dbe7f0249a537323960e4f6e, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[0].m_Data
       value: 
-      objectReference: {fileID: 21300000, guid: 8199a53f1d3a9ce4086ccb98d5a4bcba, type: 3}
+      objectReference: {fileID: 21300000, guid: fb90fa53703581a4ebb2b8c182fa61b2, type: 3}
     - target: {fileID: 8006703114021575603, guid: faab2973dbe7f0249a537323960e4f6e, type: 3}
       propertyPath: m_TileAssetArray.Array.data[0].m_RefCount
       value: 1
@@ -8084,16 +8090,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 898962314494426415, guid: 51a0f55813c7b494aad70d995f5e8592, type: 3}
       propertyPath: doors.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 898962314494426415, guid: 51a0f55813c7b494aad70d995f5e8592, type: 3}
       propertyPath: 'doors.Array.data[0]'
       value: 
-      objectReference: {fileID: 812750614}
+      objectReference: {fileID: 0}
     - target: {fileID: 898962314494426415, guid: 51a0f55813c7b494aad70d995f5e8592, type: 3}
       propertyPath: 'doors.Array.data[1]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 812750615}
     - target: {fileID: 898962314494426415, guid: 51a0f55813c7b494aad70d995f5e8592, type: 3}
       propertyPath: 'doors.Array.data[2]'
       value: 

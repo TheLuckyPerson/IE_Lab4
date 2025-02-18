@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 065ddc6ec3bde6344850420765703ee6
+guid: d65595ea5e3f35e498165dfd586a0148
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8921695774451633394
-    second: Door_Tiles_0
+      213: -4454914845596493489
+    second: Lever_0
+  - first:
+      213: 1694985531360637023
+    second: Lever_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Door_Tiles_0
+      name: Lever_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 16
-        height: 16
+        x: 2
+        y: 0
+        width: 11
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,96 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2fc0b46a90b30db70800000000000000
-      internalID: 8921695774451633394
+      spriteID: f495b931d86fc22c0800000000000000
+      internalID: -4454914845596493489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Door_Tiles_1
+      name: Lever_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20ff682b8bde88049a187136f8352d07
-      internalID: -1278488200
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Door_Tiles_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78883d14bec9e514e994fd96c577a9e0
-      internalID: 1402926538
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Door_Tiles_3
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 19
         y: 0
-        width: 16
-        height: 16
+        width: 11
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 47e562424b01b6d448f598cb8e13efbd
-      internalID: 1955310188
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Door_Tiles_4
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a31ebaf0ef8a9294a82b740b25d628e2
-      internalID: 1291688268
+      spriteID: f507d204c5cc58710800000000000000
+      internalID: 1694985531360637023
       vertices: []
       indices: 
       edges: []
@@ -226,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 25a959e7c462d7047817a41def7f8f31
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -236,11 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Door_Tiles_0: 8921695774451633394
-      Door_Tiles_1: -1278488200
-      Door_Tiles_2: 1402926538
-      Door_Tiles_3: 1955310188
-      Door_Tiles_4: 1291688268
+      Lever_0: -4454914845596493489
+      Lever_1: 1694985531360637023
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

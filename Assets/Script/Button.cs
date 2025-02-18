@@ -39,7 +39,7 @@ public class Button : MonoBehaviour
         }
     }
 
-    void TriggerResponse()
+    public virtual void TriggerResponse()
     {
         animator.SetBool("ButtonDown", isOn);
 
