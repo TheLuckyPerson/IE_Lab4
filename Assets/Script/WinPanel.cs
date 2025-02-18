@@ -6,6 +6,7 @@ public class WinPanel : MonoBehaviour
 {
     public GameObject player;  // assign the player
     public GameObject winScreen;  // assign the win panel
+    public Animator playerAnimator;
 
     void Start()
     {
@@ -14,6 +15,7 @@ public class WinPanel : MonoBehaviour
 
     public void ShowWinScreen()
     {
+        playerAnimator.enabled = false;
         winScreen.SetActive(true);
         GetComponent<Animator>().Play("levelcomplete");
 
