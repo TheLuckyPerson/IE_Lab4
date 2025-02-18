@@ -1212,6 +1212,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 6165869237733544759, guid: 09b3ece28d92f4351a7c2a26014f45d7, type: 3}
+      propertyPath: m_TagString
+      value: WinScreen
+      objectReference: {fileID: 0}
     - target: {fileID: 8178024659015971005, guid: 09b3ece28d92f4351a7c2a26014f45d7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
