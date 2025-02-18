@@ -102,10 +102,7 @@ public class PlayerScript : MonoBehaviour
 
                 if (shadowCountdown <= 0)
                 {
-                    GameObject g = Instantiate(shadowHistoryPrefab, transform.position, Quaternion.identity);
-                    SpriteRenderer sp = g.GetComponent<SpriteRenderer>();
-                    // sp.sprite = spriteRenderer.sprite;
-                    sp.flipX = facing == -1f;
+                    GameObject g = Instantiate(shadowHistoryPrefab, transform.position - new Vector3(0, 0.5f, 0), Quaternion.identity);
                     currentInputState.spawnedObj = g.gameObject;
                     shadowCountdown = shadowTimer;
                 }

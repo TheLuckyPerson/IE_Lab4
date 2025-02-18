@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8599420236860565320}
   - component: {fileID: 8190560652793024500}
+  - component: {fileID: 2617019128753564856}
   m_Layer: 7
   m_Name: ShadowHistory
   m_TagString: Player
@@ -76,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -2
-  m_Sprite: {fileID: -2413806693520163455, guid: e210f34d8e23f2647a4719bc01678da1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.45490196}
+  m_Sprite: {fileID: 3992574917577650437, guid: a3f884728ab33654dafb17538943c6f4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.1764706}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -87,3 +88,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2617019128753564856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7298936138580870528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf64c3d6fac12f74aa0558d83fb09030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 3992574917577650437, guid: a3f884728ab33654dafb17538943c6f4, type: 3}
+  - {fileID: 7215107605652010687, guid: a3f884728ab33654dafb17538943c6f4, type: 3}
+  - {fileID: -6370908258365483313, guid: a3f884728ab33654dafb17538943c6f4, type: 3}
+  - {fileID: -987414693, guid: a3f884728ab33654dafb17538943c6f4, type: 3}

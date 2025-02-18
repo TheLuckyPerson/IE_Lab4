@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 065ddc6ec3bde6344850420765703ee6
+guid: e3797835187f66944a4b9c40309e5b50
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8921695774451633394
-    second: Door_Tiles_0
+      213: -4454914845596493489
+    second: Lever_0
+  - first:
+      213: 1694985531360637023
+    second: Lever_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Door_Tiles_0
+      name: Lever_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 32
-        height: 48
+        width: 11
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2fc0b46a90b30db70800000000000000
-      internalID: 8921695774451633394
+      spriteID: f495b931d86fc22c0800000000000000
+      internalID: -4454914845596493489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lever_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 0
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f507d204c5cc58710800000000000000
+      internalID: 1694985531360637023
       vertices: []
       indices: 
       edges: []
@@ -147,8 +172,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Door_Tiles_0: 8921695774451633394
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

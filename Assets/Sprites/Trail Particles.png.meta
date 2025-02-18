@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 065ddc6ec3bde6344850420765703ee6
+guid: a3f884728ab33654dafb17538943c6f4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8921695774451633394
-    second: Door_Tiles_0
+      213: 3992574917577650437
+    second: Trail Particles_0
+  - first:
+      213: 7215107605652010687
+    second: Trail Particles_1
+  - first:
+      213: -6370908258365483313
+    second: Trail Particles_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Door_Tiles_0
+      name: Trail Particles_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 32
-        height: 48
+        y: 8
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2fc0b46a90b30db70800000000000000
-      internalID: 8921695774451633394
+      spriteID: 501b955ebb9786730800000000000000
+      internalID: 3992574917577650437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trail Particles_1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb67b1bd326312460800000000000000
+      internalID: 7215107605652010687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trail Particles_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc6d58b81bcf597a0800000000000000
+      internalID: -6370908258365483313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trail Particles_3
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34faa53d0f38b3046a3fd44f27c7a955
+      internalID: -987414693
       vertices: []
       indices: 
       edges: []
@@ -138,7 +210,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2e4a1bb27fd79814fa078aff2acc95ad
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +220,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Door_Tiles_0: 8921695774451633394
+      Trail Particles_0: 3992574917577650437
+      Trail Particles_1: 7215107605652010687
+      Trail Particles_2: -6370908258365483313
+      Trail Particles_3: -987414693
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
