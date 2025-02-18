@@ -8084,7 +8084,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 898962314494426415, guid: 51a0f55813c7b494aad70d995f5e8592, type: 3}
       propertyPath: doors.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 898962314494426415, guid: 51a0f55813c7b494aad70d995f5e8592, type: 3}
       propertyPath: 'doors.Array.data[0]'
