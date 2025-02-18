@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
-    public List<GameObject> doors;
+    public List<Buttonable> doors;
 
     public bool isOn;
 
@@ -39,13 +39,20 @@ public class Button : MonoBehaviour
         }
     }
 
-    void TriggerResponse()
+    public virtual void TriggerResponse()
     {
         animator.SetBool("ButtonDown", isOn);
 
-        foreach (GameObject g in doors)
+        foreach (Buttonable g in doors)
         {
-            g.SetActive(!isOn);
+            if (isOn)
+            {
+                g.TriggerTurnOn();
+            }
+            else
+            {
+                g.TriggerTurnOff();
+            }
         }
     }
 }
