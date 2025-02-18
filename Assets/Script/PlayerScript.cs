@@ -363,5 +363,24 @@ public class PlayerScript : MonoBehaviour
             }
             SceneManager.LoadScene(buildIdx);
         }
+
+        if (col.gameObject.tag == "Respawn" && !isShadow) {
+            stopRecording = true;
+            startPos = transform.position;
+
+            while(inputStatesHistory.Count > 0) {
+                inputStatesHistory[0].spawnedObj.SetActive(false);
+                inputStatesHistory.RemoveAt(0);
+            }
+
+            shadowCountdown = 0;
+            stopRecording = false;
+            col.GetComponent<BoxCollider2D>().enabled = false;
+            col.GetComponent<Animator>().SetTrigger("Trigger");
+        }
+
+        if (col.gameObject.tag == "Kill") {
+            KillPlayer();
+        }
     }
 }

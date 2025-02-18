@@ -336,7 +336,7 @@ MonoBehaviour:
   isShadow: 0
   inputStatesHistory: []
   startPos: {x: 0, y: 0}
-  offset: {x: 0, y: -0.5}
+  offset: {x: 0, y: -0.48}
   cloneTimerLimit: 60
   currentCloneTimer: 0
   platformLayer:
