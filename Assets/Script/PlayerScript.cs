@@ -81,6 +81,10 @@ public class PlayerScript : MonoBehaviour
     public bool hasMoved = false;
     Vector2 parentVector = Vector2.zero;
 
+    public bool canMove = true;
+    public WinPanel winPanel;
+    private bool hasTriggeredWin = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -93,6 +97,7 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!canMove) return;
         isGrounded = IsGrounded(groundLayer);
 
         if (!isShadow)
@@ -354,14 +359,10 @@ public class PlayerScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Finish")
+        if (col.gameObject.tag == "Finish" && !hasTriggeredWin)
         {
-            int buildIdx = SceneManager.GetActiveScene().buildIndex + 1;
-            if (buildIdx >= SceneManager.sceneCountInBuildSettings)
-            {
-                buildIdx = 0;
-            }
-            SceneManager.LoadScene(buildIdx);
+            hasTriggeredWin = true;
+            winPanel.ShowWinScreen();
         }
     }
 }
