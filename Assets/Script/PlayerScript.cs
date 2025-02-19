@@ -247,6 +247,7 @@ public class PlayerScript : MonoBehaviour
                 rb2d.linearVelocity = prevVelocity;
                 rb2d.gravityScale = 1f;
                 rb2d.mass = 1;
+                spriteRenderer.color = new Color(1, 1, 1, 1);
 
             }
             else
@@ -256,6 +257,7 @@ public class PlayerScript : MonoBehaviour
                 rb2d.linearVelocity = Vector2.zero;
                 rb2d.gravityScale = 0f;
                 rb2d.mass = 1000;
+                spriteRenderer.color = new Color(0,0,0,1);
             }
         }
     }
@@ -272,6 +274,7 @@ public class PlayerScript : MonoBehaviour
             }
             stopRecording = true;
             ps.original = this;
+            ps.winPanel = winPanel;
             cloneExists = true;
         }
     }
