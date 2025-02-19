@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: e43b835aa6a6b5c418b5de7d15cea306
+guid: 23e368927e43e874f9858853bc2b5ee5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2096882059006059155
-    second: Menu_Button_0
+      213: 3992574917577650437
+    second: Trail Particles_0
+  - first:
+      213: 7215107605652010687
+    second: Trail Particles_1
+  - first:
+      213: -6370908258365483313
+    second: Trail Particles_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Menu_Button_0
+      name: Trail Particles_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 32
-        height: 32
+        y: 8
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d6ddd0980e066e2e0800000000000000
-      internalID: -2096882059006059155
+      spriteID: 501b955ebb9786730800000000000000
+      internalID: 3992574917577650437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trail Particles_1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb67b1bd326312460800000000000000
+      internalID: 7215107605652010687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trail Particles_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc6d58b81bcf597a0800000000000000
+      internalID: -6370908258365483313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trail Particles_3
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80727b5c057dbf48bb82e48fdcbfbe8
+      internalID: 996144928
       vertices: []
       indices: 
       edges: []
@@ -138,7 +210,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: d07da34219e54e542bc63b7a7fae4248
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +220,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Menu_Button_0: -2096882059006059155
+      Trail Particles_0: 3992574917577650437
+      Trail Particles_1: 7215107605652010687
+      Trail Particles_2: -6370908258365483313
+      Trail Particles_3: 996144928
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
