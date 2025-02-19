@@ -1216,6 +1216,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: WinScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 7112097420781145876, guid: 09b3ece28d92f4351a7c2a26014f45d7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e43b835aa6a6b5c418b5de7d15cea306, type: 3}
     - target: {fileID: 8178024659015971005, guid: 09b3ece28d92f4351a7c2a26014f45d7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
