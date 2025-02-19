@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
 {
+    
     public void PlayGame()
     {
-        SceneManager.LoadScene(1);
+        int buildIdx = SceneManager.GetActiveScene().buildIndex + 1;
+        SceneManager.LoadScene(buildIdx);
     }
 
     public void QuitGame()
