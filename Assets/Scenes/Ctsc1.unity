@@ -153,6 +153,11 @@ MonoBehaviour:
   text: {fileID: 595787764}
   DialogueSystem: {fileID: 1764198994}
   NextIcon: {fileID: 521766454}
+  desiredMessages: <color=#FC6C85>Oh! How peculiar... It seems we have a visitor...</color>,<color=#FC6C85>Or
+    perhaps they wish to be an onlooker in our little heist.</color>,<color=#FC6C85>I
+    wonder if they're a friend or foe?</color>,<color=#FC6C85>What do you think Adelard?</color>,<color=#5C62D6>I
+    don't know Fabiano... They look kinda weird to me.</color>,<color=#5C62D6>We'll
+    keep them at a safe distance for now...</color>
   typewriterDelay: 0.05
 --- !u!4 &52006640
 Transform:
@@ -279,7 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextEffect: {fileID: 8300000, guid: 166a530998b0ece489f6f025ecf3bea1, type: 3}
-  alphabet:
+  alphabetArmenian:
   - {fileID: 8300000, guid: 2898424aa667bcf468c8d3b2a893e736, type: 3}
   - {fileID: 8300000, guid: 4a30c836844a13043abf249977a8dff1, type: 3}
   - {fileID: 8300000, guid: 21205d8903ed3f34db8ddb7af819d482, type: 3}
@@ -306,6 +311,33 @@ MonoBehaviour:
   - {fileID: 8300000, guid: acc0b787abe944a4eb80c5e50bffce85, type: 3}
   - {fileID: 8300000, guid: 3350b34705a987c4ab25f5fc9d864a9b, type: 3}
   - {fileID: 8300000, guid: 989a6accba3a4914abb14a65c01161c1, type: 3}
+  alphabetEnglish:
+  - {fileID: 8300000, guid: a1639dadc00cf264c84022c0a98bef78, type: 3}
+  - {fileID: 8300000, guid: c1826537eef63d144a56e0e2787ba712, type: 3}
+  - {fileID: 8300000, guid: 267343094ac46ff43bb3a51658dbde59, type: 3}
+  - {fileID: 8300000, guid: f8de1d5a1580e2849be4eeca55807c68, type: 3}
+  - {fileID: 8300000, guid: 2118a9880acad794da52e1ed90af9191, type: 3}
+  - {fileID: 8300000, guid: f2118a0d26f78f24183c6240caed8ca4, type: 3}
+  - {fileID: 8300000, guid: 192c24c67d891b142bd3c188a011757f, type: 3}
+  - {fileID: 8300000, guid: d8e96cd147637c146b89ca4bef494e4b, type: 3}
+  - {fileID: 8300000, guid: 281949d3cb2269f40ae02ad008e020ba, type: 3}
+  - {fileID: 8300000, guid: 9c87ffe3e2a8cbe48bb75fac67e52502, type: 3}
+  - {fileID: 8300000, guid: 9e1f4ccc076bace4bbd6f1a5c10e099e, type: 3}
+  - {fileID: 8300000, guid: 7288728e62253364d99034052d1e7dc2, type: 3}
+  - {fileID: 8300000, guid: e9c67730a224bb4409a1c6f4378408fb, type: 3}
+  - {fileID: 8300000, guid: abee00040ce72084d90540a0c6a142b6, type: 3}
+  - {fileID: 8300000, guid: fd7932341ea258441b96a0238eea8d40, type: 3}
+  - {fileID: 8300000, guid: a6b2c15a160367a4e82f95b19a91a11a, type: 3}
+  - {fileID: 8300000, guid: 514460709cd34be40938423a29d6e7bd, type: 3}
+  - {fileID: 8300000, guid: 5ae1eb33a2a25834cbf34d24ca0c1cff, type: 3}
+  - {fileID: 8300000, guid: 1912d20178c42384cbec9dae633c1c39, type: 3}
+  - {fileID: 8300000, guid: 2b02bf8dc8387ea42bd9b9191ee257eb, type: 3}
+  - {fileID: 8300000, guid: 371aae77f9f55314ca2b6b41a89c1401, type: 3}
+  - {fileID: 8300000, guid: 802bc6e328c5dda45934ac5b5460ca98, type: 3}
+  - {fileID: 8300000, guid: 55feb8e7e6b0973478bb904c539174e8, type: 3}
+  - {fileID: 8300000, guid: e89b25366dd94c8408d77662b6125094, type: 3}
+  - {fileID: 8300000, guid: 3c8d2e8c6bd46504ab95b96cd97610d2, type: 3}
+  - {fileID: 8300000, guid: 0822a1ccc2cd67e4aae598bd294e11db, type: 3}
   dialogueSource: {fileID: 52006641}
 --- !u!1 &521766454
 GameObject:

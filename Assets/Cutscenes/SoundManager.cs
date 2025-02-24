@@ -3,7 +3,8 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] AudioClip nextEffect;
-    [SerializeField] AudioClip[] alphabet;
+    [SerializeField] AudioClip[] alphabetArmenian;
+    [SerializeField] AudioClip[] alphabetEnglish;
 
     [SerializeField] AudioSource dialogueSource;
 
@@ -26,13 +27,23 @@ public class SoundManager : MonoBehaviour
         dialogueSource.PlayOneShot(nextEffect);
     }
 
-    public void soundPlayLetter(char letter)
+    public void soundPlayLetterArmenian(char letter)
     {
         letter = char.ToLower(letter);
         int index = letter - 'a';
-        if (index >= 0 && index < alphabet.Length)
+        if (index >= 0 && index < alphabetArmenian.Length)
         {
-            dialogueSource.PlayOneShot(alphabet[index]);
+            dialogueSource.PlayOneShot(alphabetArmenian[index]);
+        }
+    }
+
+    public void soundPlayLetterEnglish(char letter)
+    {
+        letter = char.ToLower(letter);
+        int index = letter - 'a';
+        if (index >= 0 && index < alphabetEnglish.Length)
+        {
+            dialogueSource.PlayOneShot(alphabetEnglish[index]);
         }
     }
 }

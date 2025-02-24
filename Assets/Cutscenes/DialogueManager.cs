@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Diagnostics.Tracing;
-using NUnit.Framework.Internal.Commands;
 using TMPro;
 using UnityEngine;
 
@@ -11,23 +9,21 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text text;
     public GameObject DialogueSystem;
     public GameObject NextIcon;
+    [SerializeField] [TextArea] string desiredMessages;
 
     public float typewriterDelay = 0.05f;
+    private bool isArmenian = false;
 
     // We hold this coroutine in a variable so that we are able to set it to null to manipulate if the player wants to
     // double click to skip past the dialogue and just display the full message immediately
     private Coroutine displayCoroutine;
-    private string fullMessage;
+    private string currentFullMessage;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         // This may look awkward, but the commas here allow us to write out all the messages we want in a confined space.
-        ShowMessage("" +
-            "Oh! How peculiar... It seems we have a visitor...," +
-            "Or perhaps they wish to be an onlooker in our little heist.," +
-            "I wonder if they're a friend or foe?," +
-            "What do you think Adelard?");
+        ShowMessage(desiredMessages);
     }
 
     // Update is called once per frame
@@ -39,7 +35,7 @@ public class DialogueManager : MonoBehaviour
             if (displayCoroutine != null)
             {
                 StopCoroutine(displayCoroutine);
-                text.text = fullMessage;
+                text.text = currentFullMessage;
                 displayCoroutine = null;
             }
             // If no message is currently playing (the couroutine is not being run and is null) then we can move on to the
@@ -72,8 +68,8 @@ public class DialogueManager : MonoBehaviour
     {
         if (number < words.Length)
         {
-            fullMessage = words[number];
-            displayCoroutine = StartCoroutine(TypeText(fullMessage));
+            currentFullMessage = words[number];
+            displayCoroutine = StartCoroutine(TypeText(currentFullMessage));
             number += 1;
         } else
         {
@@ -86,14 +82,53 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator TypeText(string message)
     {
         text.text = "";
-        foreach (char letter in message)
+
+        int i = 0;
+
+        while (i < message.Length)
         {
-            text.text += letter;
-            if (char.IsLetter(letter))
+            if (message[i] == '<')
             {
-                SoundManager.instance.soundPlayLetter(letter);
+                int closeTag = message.IndexOf('>', i);
+                if (closeTag != -1)
+                {
+                    string tag = message.Substring(i, closeTag - i + 1);
+                    text.text += tag;
+
+                    if (tag.StartsWith("<color=", System.StringComparison.OrdinalIgnoreCase))
+                    {
+                        if (tag.Contains("FC6C85"))
+                        {
+                            isArmenian = true;
+                        }
+                        else if (tag.Contains("5C62D6"))
+                        {
+                            isArmenian = false;
+                        }
+                    }
+
+                    i = closeTag + 1;
+                    continue;
+                }
             }
+
+            char letter = message[i];
+            text.text += letter;
+
+            if(char.IsLetter(letter))
+            {
+                if (isArmenian)
+                {
+                    SoundManager.instance.soundPlayLetterArmenian(letter);
+                } else
+                {
+                    SoundManager.instance.soundPlayLetterEnglish(letter);
+                }
+            }
+
+            i++;
             yield return new WaitForSeconds(typewriterDelay);
+
         }
         displayCoroutine = null;
     }
