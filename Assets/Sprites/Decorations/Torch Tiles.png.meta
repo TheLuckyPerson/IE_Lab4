@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: d65595ea5e3f35e498165dfd586a0148
+guid: f7c05ed96adae9c48a173386b8d9c4e5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4454914845596493489
-    second: Lever_0
+      213: -5957846194347014143
+    second: Torch Tiles_0
   - first:
-      213: 1694985531360637023
-    second: Lever_1
+      213: -2173994680966616029
+    second: Torch Tiles_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lever_0
+      name: Torch Tiles_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f495b931d86fc22c0800000000000000
-      internalID: -4454914845596493489
+      spriteID: 1088887c37a715da0800000000000000
+      internalID: -5957846194347014143
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lever_1
+      name: Torch Tiles_1
       rect:
         serializedVersion: 2
         x: 16
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f507d204c5cc58710800000000000000
-      internalID: 1694985531360637023
+      spriteID: 32c65612b5b64d1e0800000000000000
+      internalID: -2173994680966616029
       vertices: []
       indices: 
       edges: []
@@ -163,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8a779e57f9a25314d942d5567763ba86
+    spriteID: 6b697df78877ef141af916a8b563b64f
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Lever_0: -4454914845596493489
-      Lever_1: 1694985531360637023
+      Torch Tiles_0: -5957846194347014143
+      Torch Tiles_1: -2173994680966616029
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

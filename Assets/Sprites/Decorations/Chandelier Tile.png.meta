@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: d65595ea5e3f35e498165dfd586a0148
+guid: 1c87c7f244f00914d9e25e73c82fbc67
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4454914845596493489
-    second: Lever_0
-  - first:
-      213: 1694985531360637023
-    second: Lever_1
+      213: 9092071455987067338
+    second: Chandelier Tile_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,7 +113,51 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lever_0
+      name: Chandelier Tile_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac9e39e31d68d2e70800000000000000
+      internalID: 9092071455987067338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chandelier Tile_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de732c9539483f34d896ee5a2e1c69da
+      internalID: 407115057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chandelier Tile_2
       rect:
         serializedVersion: 2
         x: 0
@@ -129,16 +170,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f495b931d86fc22c0800000000000000
-      internalID: -4454914845596493489
+      spriteID: a7d185afec586684cab42419d8b0f3b4
+      internalID: 419592557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lever_1
+      name: Chandelier Tile_3
       rect:
         serializedVersion: 2
         x: 16
@@ -151,10 +192,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f507d204c5cc58710800000000000000
-      internalID: 1694985531360637023
+      spriteID: 2677433ee18b7d74ba57cd12ec5feb6d
+      internalID: -1183049091
       vertices: []
       indices: 
       edges: []
@@ -163,7 +204,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8a779e57f9a25314d942d5567763ba86
+    spriteID: 6ea7bb1a0cd6ab247b335ff9868ce47e
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +214,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Lever_0: -4454914845596493489
-      Lever_1: 1694985531360637023
+      Chandelier Tile_0: 9092071455987067338
+      Chandelier Tile_1: 407115057
+      Chandelier Tile_2: 419592557
+      Chandelier Tile_3: -1183049091
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

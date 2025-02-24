@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: d65595ea5e3f35e498165dfd586a0148
+guid: 336610065eb4fca4e91d0dba531b30d6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4454914845596493489
-    second: Lever_0
-  - first:
-      213: 1694985531360637023
-    second: Lever_1
+      213: 4587422795427921144
+    second: Wood Floor Tiles_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lever_0
+      name: Wood Floor Tiles_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +128,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f495b931d86fc22c0800000000000000
-      internalID: -4454914845596493489
+      spriteID: 8fcb20c2abcc9af30800000000000000
+      internalID: 4587422795427921144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lever_1
+      name: Wood Floor Tiles_1
       rect:
         serializedVersion: 2
         x: 16
@@ -151,10 +148,32 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f507d204c5cc58710800000000000000
-      internalID: 1694985531360637023
+      spriteID: 04c6c11989ca9e64e819a34087f12aa3
+      internalID: 411014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wood Floor Tiles_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b478c10bcca1348a8f4762d1fd6c9b
+      internalID: -2000234885
       vertices: []
       indices: 
       edges: []
@@ -163,7 +182,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8a779e57f9a25314d942d5567763ba86
+    spriteID: 8d599c8baeea9d446b8036309f5fc21f
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +192,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Lever_0: -4454914845596493489
-      Lever_1: 1694985531360637023
+      Wood Floor Tiles_0: 4587422795427921144
+      Wood Floor Tiles_1: 411014
+      Wood Floor Tiles_2: -2000234885
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: d65595ea5e3f35e498165dfd586a0148
+guid: 4142e2556a645b841bd0a23fa1d51e37
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4454914845596493489
-    second: Lever_0
-  - first:
-      213: 1694985531360637023
-    second: Lever_1
+      213: -5708472619968350762
+    second: Carpet Tiles_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lever_0
+      name: Carpet Tiles_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +128,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f495b931d86fc22c0800000000000000
-      internalID: -4454914845596493489
+      spriteID: 6d53ebc956e67c0b0800000000000000
+      internalID: -5708472619968350762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lever_1
+      name: Carpet Tiles_1
       rect:
         serializedVersion: 2
         x: 16
@@ -151,10 +148,32 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f507d204c5cc58710800000000000000
-      internalID: 1694985531360637023
+      spriteID: 9875b6db4c42f7b40bc3dbcef2b676c3
+      internalID: -1343173178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carpet Tiles_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5afcd02ed41392d4fa525e46118db0d4
+      internalID: 58886502
       vertices: []
       indices: 
       edges: []
@@ -163,7 +182,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8a779e57f9a25314d942d5567763ba86
+    spriteID: d618ebca68c6206438c8e4f4bfd42fc3
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +192,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Lever_0: -4454914845596493489
-      Lever_1: 1694985531360637023
+      Carpet Tiles_0: -5708472619968350762
+      Carpet Tiles_1: -1343173178
+      Carpet Tiles_2: 58886502
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
