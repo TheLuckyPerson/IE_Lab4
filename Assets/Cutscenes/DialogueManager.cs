@@ -24,7 +24,8 @@ public class DialogueManager : MonoBehaviour
     {
         // This may look awkward, but the commas here allow us to write out all the messages we want in a confined space.
         ShowMessage("" +
-            "Oh! How peculiar... It seems we have a visitor, or perhaps they wish to be an onlooker in our heist.," +
+            "Oh! How peculiar... It seems we have a visitor...," +
+            "Or perhaps they wish to be an onlooker in our little heist.," +
             "I wonder if they're a friend or foe?," +
             "What do you think Adelard?");
     }
