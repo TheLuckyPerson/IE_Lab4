@@ -1,6 +1,8 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 // This video helped with a lot of this script: https://www.youtube.com/watch?v=g609HLRKPXQ
 
@@ -8,8 +10,8 @@ public class DialogueManager : MonoBehaviour
 {
     public TMP_Text text;
     public GameObject DialogueSystem;
-    public GameObject NextIcon;
     [SerializeField] [TextArea] string desiredMessages;
+    [SerializeField] Image fadeImage;
 
     public float typewriterDelay = 0.05f;
     private bool isArmenian = false;
@@ -19,10 +21,19 @@ public class DialogueManager : MonoBehaviour
     private Coroutine displayCoroutine;
     private string currentFullMessage;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // This may look awkward, but the commas here allow us to write out all the messages we want in a confined space.
+        StartCoroutine(WaitForCatIdle());
+    }
+
+    private IEnumerator WaitForCatIdle()
+    {
+        Ctsc1Play.instance.catAnimation = true;
+        yield return new WaitUntil(() => Ctsc1Play.instance.CatIsIdle);
+        Ctsc1Play.instance.catAnimation = false;
+        yield return new WaitForSeconds(1.5f);
         ShowMessage(desiredMessages);
     }
 
@@ -60,7 +71,7 @@ public class DialogueManager : MonoBehaviour
         number = 0;
         words = Message.Split(',');
         DialogueSystem.SetActive(true);
-        NextIcon.SetActive(true);
+ 
         Skip();
     }
 
@@ -75,8 +86,26 @@ public class DialogueManager : MonoBehaviour
         {
             number = 0;
             DialogueSystem.SetActive(false);
-            NextIcon.SetActive(false);
+            StartCoroutine(FadeOutCoroutine());
         }
+    }
+
+    private IEnumerator FadeOutCoroutine()
+    {
+        float elapsedTime = 0f;
+        Color color = fadeImage.color;
+
+        while (elapsedTime < 1f)
+        {
+            elapsedTime += Time.deltaTime;
+            float alpha = Mathf.Clamp01(elapsedTime / 1f);
+            fadeImage.color = new Color(color.r, color.g, color.b, alpha);
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(0.5f);
+        int buildIdx = SceneManager.GetActiveScene().buildIndex + 1;
+        SceneManager.LoadScene(buildIdx);
     }
 
     private IEnumerator TypeText(string message)
