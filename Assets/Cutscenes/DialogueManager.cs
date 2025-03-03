@@ -12,7 +12,10 @@ public class DialogueManager : MonoBehaviour
     public GameObject DialogueSystem;
     [SerializeField] [TextArea] string desiredMessages;
     [SerializeField] Image fadeImage;
-
+    [SerializeField] RawImage speakerImage;
+    [SerializeField] Texture2D fabianoMugshot;
+    [SerializeField] Texture2D adelardMugshot;
+    private MonoBehaviour playerScript;
     public float typewriterDelay = 0.05f;
     private bool isArmenian = false;
 
@@ -25,7 +28,37 @@ public class DialogueManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        StartCoroutine(WaitForCatIdle());
+        GameObject player = GameObject.FindWithTag("Player");
+
+        if (player != null)
+        {
+            playerScript = player.GetComponent<PlayerScript>();
+        }
+
+        if (SceneManager.GetActiveScene().name == "Ctsc1")
+        {
+            StartCoroutine(WaitForCatIdle());
+        } else if (SceneManager.GetActiveScene().name == "Ctsc2") {
+            StartCoroutine(PlayCtsc2());
+        }
+        else if (SceneManager.GetActiveScene().name == "Lv0" || 
+            SceneManager.GetActiveScene().name == "Lv1 1" || 
+            SceneManager.GetActiveScene().name == "Lv2" ||
+            SceneManager.GetActiveScene().name == "Lv 5") 
+        {
+            ShowMessage(desiredMessages);
+            if (playerScript != null)
+            {
+                playerScript.enabled = false;
+            }
+        }
+    }
+
+    private IEnumerator PlayCtsc2()
+    {
+        Ctsc2Play.instance.isPanningCamera = true;
+        yield return new WaitForSeconds(3f);
+        ShowMessage(desiredMessages);
     }
 
     private IEnumerator WaitForCatIdle()
@@ -85,8 +118,16 @@ public class DialogueManager : MonoBehaviour
         } else
         {
             number = 0;
+            if (playerScript != null)
+            {
+                playerScript.enabled = true;
+            }
+
+            if (SceneManager.GetActiveScene().name == "Ctsc1" || SceneManager.GetActiveScene().name == "Ctsc2")
+            {
+                StartCoroutine(FadeOutCoroutine());
+            }
             DialogueSystem.SetActive(false);
-            StartCoroutine(FadeOutCoroutine());
         }
     }
 
@@ -95,6 +136,11 @@ public class DialogueManager : MonoBehaviour
         float elapsedTime = 0f;
         Color color = fadeImage.color;
 
+        if (SceneManager.GetActiveScene().name == "Ctsc2")
+        {
+            Ctsc2Play.instance.catAnimation = true;
+            yield return new WaitForSeconds(2f);
+        }
         while (elapsedTime < 1f)
         {
             elapsedTime += Time.deltaTime;
@@ -129,10 +175,12 @@ public class DialogueManager : MonoBehaviour
                         if (tag.Contains("FC6C85"))
                         {
                             isArmenian = true;
+                            speakerImage.texture = fabianoMugshot;
                         }
                         else if (tag.Contains("5C62D6"))
                         {
                             isArmenian = false;
+                            speakerImage.texture = adelardMugshot;
                         }
                     }
 
