@@ -146,10 +146,14 @@ public class PlayerScript : MonoBehaviour
                 }
                 else
                 {
-                    original.cloneExists = false;
-                    foreach (InputStates inputs in original.inputStatesHistory)
+                    if (original != null)
                     {
-                        inputs.spawnedObj.SetActive(true);
+                        original.cloneExists = false;
+
+                        foreach (InputStates inputs in original.inputStatesHistory)
+                        {
+                            inputs.spawnedObj.SetActive(true);
+                        }
                     }
                     Destroy(gameObject);
                     return;
