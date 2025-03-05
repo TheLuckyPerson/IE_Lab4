@@ -41,9 +41,9 @@ public class DialogueManager : MonoBehaviour
         } else if (SceneManager.GetActiveScene().name == "Ctsc2") {
             StartCoroutine(PlayCtsc2());
         }
-        else if (SceneManager.GetActiveScene().name == "Lv0" || 
-            SceneManager.GetActiveScene().name == "Lv1 1" || 
-            SceneManager.GetActiveScene().name == "Lv2" ||
+        else if (SceneManager.GetActiveScene().name == "Lv 0" || 
+            SceneManager.GetActiveScene().name == "Lv 1" || 
+            SceneManager.GetActiveScene().name == "Lv 2" ||
             SceneManager.GetActiveScene().name == "Lv 5") 
         {
             ShowMessage(desiredMessages);
