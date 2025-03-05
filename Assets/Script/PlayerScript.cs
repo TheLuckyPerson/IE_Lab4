@@ -54,6 +54,7 @@ public class PlayerScript : MonoBehaviour
     public PlayerScript shadowPrefab;
     public GameObject shadowHistoryPrefab;
     public PlayerScript original;
+    public PlayerScript currentClone;
     public bool cloneExists = false;
     public float shadowTimer = 2f;
     public float shadowCountdown = 0f;
@@ -268,13 +269,19 @@ public class PlayerScript : MonoBehaviour
 
     void DoSpawn()
     {
-        if (Input.GetButtonDown("Spawn") && !cloneExists && hasMoved)
+        if (Input.GetButtonDown("Spawn") && hasMoved)
         {
+            if (currentClone != null) {
+                Destroy(currentClone.gameObject);
+                currentClone = null;
+            }
             spawnSound.Play();
             PlayerScript ps = Instantiate(shadowPrefab, startPos + offset, Quaternion.identity);
+            currentClone = ps;
             for (int i = 0; i < inputStatesHistory.Count; i++)
             {
                 ps.inputStatesHistory.Add(inputStatesHistory[i]);
+                inputStatesHistory[i].spawnedObj.SetActive(true);
             }
             stopRecording = true;
             ps.original = this;
@@ -330,22 +337,6 @@ public class PlayerScript : MonoBehaviour
             rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, jumpMag);
             animator.SetTrigger("Jump");
             jumpSound.Play();
-        }
-    }
-
-    void DoDash()
-    {
-        if (currentInputState.dash && !hasDashed)
-        {
-            state = PlayerState.dashing;
-            dashDistCovered = 0f;
-            hasDashed = true;
-            dashSound.Play();
-        }
-
-        if (isGrounded)
-        {
-            hasDashed = false;
         }
     }
 
