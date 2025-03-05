@@ -119,10 +119,10 @@ TextureImporter:
       name: Lever_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 11
-        height: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: Lever_1
       rect:
         serializedVersion: 2
-        x: 19
+        x: 16
         y: 0
-        width: 11
-        height: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8a779e57f9a25314d942d5567763ba86
     internalID: 0
     vertices: []
     indices: 
