@@ -399,7 +399,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 704
   speed: 7
-  jumpMag: 12
+  jumpMag: 9
   facing: 1
   dashMag: 20
   dashDist: 4
@@ -421,7 +421,7 @@ MonoBehaviour:
   isShadow: 0
   inputStatesHistory: []
   startPos: {x: 0, y: 0}
-  offset: {x: 0, y: 0}
+  offset: {x: 0, y: 0.5}
   cloneTimerLimit: 60
   currentCloneTimer: 0
   platformLayer:

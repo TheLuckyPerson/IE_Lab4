@@ -8831,14 +8831,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 369620436}
     m_Modifications:
     - target: {fileID: 2586918159496871342, guid: 96fdf9f62e22f44febbecb49f297aac0, type: 3}
-      propertyPath: jumpMag
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2586918159496871342, guid: 96fdf9f62e22f44febbecb49f297aac0, type: 3}
-      propertyPath: offset.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2586918159496871342, guid: 96fdf9f62e22f44febbecb49f297aac0, type: 3}
       propertyPath: winPanel
       value: 
       objectReference: {fileID: 589418152}
