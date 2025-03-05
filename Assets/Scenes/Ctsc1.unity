@@ -213,7 +213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 896644732032474518, guid: e118eed328a450a4b93ce7e077a4ec0b, type: 3}
       propertyPath: m_Simulated
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1981899990535292129, guid: e118eed328a450a4b93ce7e077a4ec0b, type: 3}
       propertyPath: m_LocalScale.x
@@ -263,6 +263,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2016623393800822808, guid: e118eed328a450a4b93ce7e077a4ec0b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3325462383169078456, guid: e118eed328a450a4b93ce7e077a4ec0b, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -279,7 +283,20 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7954321354469813652, guid: e118eed328a450a4b93ce7e077a4ec0b, type: 3}
+      propertyPath: 'groundDetectors.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954321354469813652, guid: e118eed328a450a4b93ce7e077a4ec0b, type: 3}
+      propertyPath: 'groundDetectors.Array.data[1]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954321354469813652, guid: e118eed328a450a4b93ce7e077a4ec0b, type: 3}
+      propertyPath: 'groundDetectors.Array.data[2]'
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7954321354469813652, guid: e118eed328a450a4b93ce7e077a4ec0b, type: 3}
     m_RemovedGameObjects:
     - {fileID: 3904662859865550904, guid: e118eed328a450a4b93ce7e077a4ec0b, type: 3}
     - {fileID: 3484757202008384925, guid: e118eed328a450a4b93ce7e077a4ec0b, type: 3}
@@ -2788,6 +2805,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1263646982039595492, guid: 85d6bd3beaf18b245987910f3b028c17, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2392401962425244165, guid: 85d6bd3beaf18b245987910f3b028c17, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2868,9 +2889,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3636978751155227999, guid: 85d6bd3beaf18b245987910f3b028c17, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636978751155227999, guid: 85d6bd3beaf18b245987910f3b028c17, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 640
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636978751155227999, guid: 85d6bd3beaf18b245987910f3b028c17, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 360
+      objectReference: {fileID: 0}
     - target: {fileID: 5028364656652666942, guid: 85d6bd3beaf18b245987910f3b028c17, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929431678824809875, guid: 85d6bd3beaf18b245987910f3b028c17, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929431678824809875, guid: 85d6bd3beaf18b245987910f3b028c17, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929431678824809875, guid: 85d6bd3beaf18b245987910f3b028c17, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929431678824809875, guid: 85d6bd3beaf18b245987910f3b028c17, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929431678824809875, guid: 85d6bd3beaf18b245987910f3b028c17, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9211038619159670466, guid: 85d6bd3beaf18b245987910f3b028c17, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
