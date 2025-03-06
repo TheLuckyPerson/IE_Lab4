@@ -24,7 +24,7 @@ public class Button : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Player" && !isOn)
         {
             isOn = true;
             TriggerResponse();
