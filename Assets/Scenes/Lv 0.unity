@@ -6441,6 +6441,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7188762399733464579, guid: faab2973dbe7f0249a537323960e4f6e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7262574851241455216, guid: faab2973dbe7f0249a537323960e4f6e, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
