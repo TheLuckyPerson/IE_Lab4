@@ -8,10 +8,12 @@ public class Lever : MonoBehaviour
     public bool isOn;
 
     private Animator animator;
+    private AudioSource leverSound;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        leverSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,7 +24,8 @@ public class Lever : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Player") {
+        if (col.gameObject.tag == "Player")
+        {
             isOn = !isOn;
             TriggerResponse();
         }
@@ -31,11 +34,15 @@ public class Lever : MonoBehaviour
     public virtual void TriggerResponse()
     {
         animator.SetTrigger("trigger");
-
-        foreach (Buttonable g in doors) {
-            if (isOn) {
+        leverSound.Play();
+        foreach (Buttonable g in doors)
+        {
+            if (isOn)
+            {
                 g.TriggerTurnOn();
-            } else {
+            }
+            else
+            {
                 g.TriggerTurnOff();
             }
         }

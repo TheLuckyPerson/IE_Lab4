@@ -46,6 +46,7 @@ public class PlayerScript : MonoBehaviour
     public float dashDistCovered = 0f;
     public bool isGrounded = false;
     public bool prevGroundState = false;
+    public bool canJump = true;
     public InputStates currentInputState;
     [Header("Dash")]
     public bool hasDashed = false;
@@ -54,6 +55,7 @@ public class PlayerScript : MonoBehaviour
     public PlayerScript shadowPrefab;
     public GameObject shadowHistoryPrefab;
     public PlayerScript original;
+    public PlayerScript currentClone;
     public bool cloneExists = false;
     public float shadowTimer = 2f;
     public float shadowCountdown = 0f;
@@ -88,6 +90,9 @@ public class PlayerScript : MonoBehaviour
     public WinPanel winPanel;
     private bool hasTriggeredWin = false;
 
+    public float shadowMovementDelay = .1f;
+    public float shadowMovementDelayTimer = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -106,7 +111,7 @@ public class PlayerScript : MonoBehaviour
         if (!isShadow)
         {  // record inputs
             currentInputState.xDir = Input.GetAxis("Horizontal");
-            currentInputState.jump = Input.GetButtonDown("Jump");
+            currentInputState.jump = Input.GetButtonDown("Jump") && canJump;
             currentInputState.dash = Input.GetButtonDown("Dash");
 
             if ((currentInputState.xDir != 0 || currentInputState.jump || currentInputState.dash) && !hasMoved)
@@ -134,6 +139,12 @@ public class PlayerScript : MonoBehaviour
         }
         else  // is a shadow clone
         {
+            if (shadowMovementDelayTimer < shadowMovementDelay)
+            {
+                shadowMovementDelayTimer += Time.deltaTime;
+                return;
+            }
+
             PauseClone();
 
             if (!isPaused)
@@ -146,10 +157,14 @@ public class PlayerScript : MonoBehaviour
                 }
                 else
                 {
-                    original.cloneExists = false;
-                    foreach (InputStates inputs in original.inputStatesHistory)
+                    if (original != null)
                     {
-                        inputs.spawnedObj.SetActive(true);
+                        original.cloneExists = false;
+
+                        foreach (InputStates inputs in original.inputStatesHistory)
+                        {
+                            inputs.spawnedObj.SetActive(true);
+                        }
                     }
                     Destroy(gameObject);
                     return;
@@ -208,15 +223,18 @@ public class PlayerScript : MonoBehaviour
     void DoPlatformUpdates()
     {
         RaycastHit2D hit = IsGrounded(platformLayer);
-        if (hit)
+        if (hit && hit.transform.position.y < transform.position.y - .5f)
         {
             Rigidbody2D rbTarget = hit.transform.gameObject.GetComponent<Rigidbody2D>();
+            // transform.position = new Vector3(transform.position.x, hit.point.y + .5f);
             parentVector = rbTarget.linearVelocity;
-            rb2d.mass = .01f;
+            // transform.parent = rbTarget.transform;
+            rb2d.mass = 1f;
         }
         else
         {
             rb2d.mass = 1f;
+            transform.parent = null;
             parentVector = Vector2.zero;
         }
     }
@@ -257,20 +275,27 @@ public class PlayerScript : MonoBehaviour
                 rb2d.linearVelocity = Vector2.zero;
                 rb2d.gravityScale = 0f;
                 rb2d.mass = 1000;
-                spriteRenderer.color = new Color(0,0,0,1);
+                spriteRenderer.color = new Color(0, 0, 0, 1);
             }
         }
     }
 
     void DoSpawn()
     {
-        if (Input.GetButtonDown("Spawn") && !cloneExists && hasMoved)
+        if (Input.GetButtonDown("Spawn") && hasMoved)
         {
+            if (currentClone != null)
+            {
+                Destroy(currentClone.gameObject);
+                currentClone = null;
+            }
             spawnSound.Play();
             PlayerScript ps = Instantiate(shadowPrefab, startPos + offset, Quaternion.identity);
+            currentClone = ps;
             for (int i = 0; i < inputStatesHistory.Count; i++)
             {
                 ps.inputStatesHistory.Add(inputStatesHistory[i]);
+                inputStatesHistory[i].spawnedObj.SetActive(true);
             }
             stopRecording = true;
             ps.original = this;
@@ -329,22 +354,6 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    void DoDash()
-    {
-        if (currentInputState.dash && !hasDashed)
-        {
-            state = PlayerState.dashing;
-            dashDistCovered = 0f;
-            hasDashed = true;
-            dashSound.Play();
-        }
-
-        if (isGrounded)
-        {
-            hasDashed = false;
-        }
-    }
-
     void PerformDash()
     {
         rb2d.linearVelocity = Vector2.right * facing * dashMag;
@@ -368,11 +377,13 @@ public class PlayerScript : MonoBehaviour
             winPanel.ShowWinScreen();
         }
 
-        if (col.gameObject.tag == "Respawn" && !isShadow) {
+        if (col.gameObject.tag == "Respawn" && !isShadow)
+        {
             stopRecording = true;
             startPos = transform.position;
 
-            while(inputStatesHistory.Count > 0) {
+            while (inputStatesHistory.Count > 0)
+            {
                 inputStatesHistory[0].spawnedObj.SetActive(false);
                 inputStatesHistory.RemoveAt(0);
             }
@@ -383,7 +394,8 @@ public class PlayerScript : MonoBehaviour
             col.GetComponent<Animator>().SetTrigger("Trigger");
         }
 
-        if (col.gameObject.tag == "Kill") {
+        if (col.gameObject.tag == "Kill")
+        {
             KillPlayer();
         }
     }
