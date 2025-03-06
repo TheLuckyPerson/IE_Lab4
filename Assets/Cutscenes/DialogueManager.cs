@@ -44,6 +44,7 @@ public class DialogueManager : MonoBehaviour
         else if (SceneManager.GetActiveScene().name == "Lv 0" || 
             SceneManager.GetActiveScene().name == "Lv 1" || 
             SceneManager.GetActiveScene().name == "Lv 2" ||
+            SceneManager.GetActiveScene().name == "Lv 2.5" ||
             SceneManager.GetActiveScene().name == "Lv 5") 
         {
             ShowMessage(desiredMessages);
