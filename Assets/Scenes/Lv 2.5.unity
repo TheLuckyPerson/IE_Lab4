@@ -149,7 +149,7 @@ PrefabInstance:
         on Adelard's shoulders to reach the gold. Make sure to press jump when you
         would want me to and I'll follow your lead!</color>,<color=#FC6C85>Also Adelard
         - it's important to remember that no matter your positioning I'll remember
-        and copy all of your inputs.</color
+        and copy all of your inputs.</color>
       objectReference: {fileID: 0}
     - target: {fileID: 4278539087453035488, guid: 5467aa216efe4d74c8c76a31b8ac8c09, type: 3}
       propertyPath: m_Name
