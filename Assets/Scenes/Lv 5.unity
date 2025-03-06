@@ -11155,11 +11155,9 @@ PrefabInstance:
     - target: {fileID: 1950288825850090947, guid: 5467aa216efe4d74c8c76a31b8ac8c09, type: 3}
       propertyPath: desiredMessages
       value: <color=#5C62D6>Well that's strange. How are we supposed to reach the
-        button up there?</color>,<color=#FC6C85>Well there is an interesting trick
-        we can do...</color>,<color=#FC6C85>Adelard - No matter your positioning
-        I will still remember every single movement input you've made. Additionally
-        as much as I'm cool with you floating on my back... I can still use your
-        head as a platform.</color>
+        button up there?</color>,<color=#FC6C85>Well... we'll just use the same trick
+        as we did a while ago. </color>,<color=#FC6C85>As much as I'm cool with you
+        floating on my back... I can still use your head as a platform.</color>
       objectReference: {fileID: 0}
     - target: {fileID: 4278539087453035488, guid: 5467aa216efe4d74c8c76a31b8ac8c09, type: 3}
       propertyPath: m_Name

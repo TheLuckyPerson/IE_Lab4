@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "lab3.sln"
+    "dotnet.defaultSolution": "IE_Lab4.sln"
 }
