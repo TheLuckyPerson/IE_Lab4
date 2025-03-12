@@ -57,7 +57,9 @@ MonoBehaviour:
   speakerImage: {fileID: 0}
   fabianoMugshot: {fileID: 2800000, guid: 3ceb8d193b0264040b6f270abc271403, type: 3}
   adelardMugshot: {fileID: 2800000, guid: 7c33e380060025547ad27211b6181d24, type: 3}
+  wizardMugshot: {fileID: 2800000, guid: 91ada0dacb532854db6e7aaef8af45d4, type: 3}
   typewriterDelay: 0.05
+  isLevelCutscene: 0
 --- !u!114 &1496825226191779482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +127,34 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e89b25366dd94c8408d77662b6125094, type: 3}
   - {fileID: 8300000, guid: 3c8d2e8c6bd46504ab95b96cd97610d2, type: 3}
   - {fileID: 8300000, guid: 0822a1ccc2cd67e4aae598bd294e11db, type: 3}
+  alphabetFrench:
+  - {fileID: 8300000, guid: a4367147b5ffd33488b8499b5f2a3ecd, type: 3}
+  - {fileID: 8300000, guid: 2fd443243f46da340b277703af5facc9, type: 3}
+  - {fileID: 8300000, guid: f9155ded83fe6ab408b727a929cab928, type: 3}
+  - {fileID: 8300000, guid: 7e5162186e2f4fe48993a2ebfc4ceb5a, type: 3}
+  - {fileID: 8300000, guid: 2e08bf7ee5954914c96ca336546f24a0, type: 3}
+  - {fileID: 8300000, guid: e7b2749393e3a7842bff2191ae7181de, type: 3}
+  - {fileID: 8300000, guid: dee8b4103ebec6649bd7b3e2b99e8fee, type: 3}
+  - {fileID: 8300000, guid: 65b1c43d9b090874e907080be0b98263, type: 3}
+  - {fileID: 8300000, guid: 879e507d8e8ce36428b48f5cbe4ceb3e, type: 3}
+  - {fileID: 8300000, guid: 889882df696584945879479257407ddb, type: 3}
+  - {fileID: 8300000, guid: 1f2837e3979c5bc4b8e7808535401d85, type: 3}
+  - {fileID: 8300000, guid: 957e83e7bb6f11946968cd0730c8ed95, type: 3}
+  - {fileID: 8300000, guid: 5ae34e4527f38dc44a9f9e72f10c75f2, type: 3}
+  - {fileID: 8300000, guid: 4fec1437fc37e3444a5fa09e8a4d9175, type: 3}
+  - {fileID: 8300000, guid: cda2d44b3dca0464fbae0080bc587037, type: 3}
+  - {fileID: 8300000, guid: 40e6b3f05f87cde4a94ee26410415658, type: 3}
+  - {fileID: 8300000, guid: fb044a91257e86e42a6cb4f1bd034dfe, type: 3}
+  - {fileID: 8300000, guid: 080c6cd26761f474bb65f15fc23350ce, type: 3}
+  - {fileID: 8300000, guid: bdd73000c46da484b91c3dd4758dae83, type: 3}
+  - {fileID: 8300000, guid: 1e1cbe9672330114b8e8e7fd17022720, type: 3}
+  - {fileID: 8300000, guid: fa17d590f473eb84795b6ff91cea5d91, type: 3}
+  - {fileID: 8300000, guid: fa17d590f473eb84795b6ff91cea5d91, type: 3}
+  - {fileID: 8300000, guid: 9ef1629c5275e764f9d6756e21dd071e, type: 3}
+  - {fileID: 8300000, guid: 524f545d12ae6614fa05b563e050450a, type: 3}
+  - {fileID: 8300000, guid: 8ed22ed1f1868c7488d781dcec8735c6, type: 3}
+  - {fileID: 8300000, guid: 3f4144bd36e642e469ba5b4f3aec2eca, type: 3}
+  - {fileID: 8300000, guid: fee5308f24dc1d047b657cacd10a20eb, type: 3}
   dialogueSource: {fileID: 5117978693055375599}
 --- !u!82 &5117978693055375599
 AudioSource:
