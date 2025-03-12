@@ -42,10 +42,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Ctsc3.unity
     guid: 733b9061461126a4992b3f1220dea0db
   - enabled: 1
-    path: Assets/Scenes/Lv6.unity
+    path: Assets/Scenes/Lv 6.unity
     guid: bf02722fc8ee847dfb4c805e913bead2
   - enabled: 1
-    path: Assets/Scenes/Lv7.unity
+    path: Assets/Scenes/Lv 7.unity
     guid: 5e691e54805b64988ab6667480364347
   - enabled: 1
     path: Assets/Scenes/WinScreen.unity
