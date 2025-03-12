@@ -93,6 +93,8 @@ public class PlayerScript : MonoBehaviour
     public float shadowMovementDelay = .1f;
     public float shadowMovementDelayTimer = 0f;
 
+    private bool alreadySpawnedShadow = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -121,15 +123,29 @@ public class PlayerScript : MonoBehaviour
             }
 
             // spawn shadows
+            if (currentInputState.jump && !stopRecording)
+            {
+                alreadySpawnedShadow = true;
+                GameObject g = Instantiate(shadowHistoryPrefab, transform.position + shadowHistoryOffset, Quaternion.identity);
+                SpriteRenderer r = g.GetComponent<SpriteRenderer>();
+                r.color = Color.green;
+                currentInputState.spawnedObj = g.gameObject;
+                shadowCountdown = shadowTimer;
+            }
+
             if (!stopRecording && hasMoved)
             {
                 shadowCountdown -= Time.deltaTime;
 
                 if (shadowCountdown <= 0)
                 {
-                    GameObject g = Instantiate(shadowHistoryPrefab, transform.position + shadowHistoryOffset, Quaternion.identity);
-                    currentInputState.spawnedObj = g.gameObject;
-                    shadowCountdown = shadowTimer;
+                    if (!alreadySpawnedShadow)
+                    {
+                        GameObject g = Instantiate(shadowHistoryPrefab, transform.position + shadowHistoryOffset, Quaternion.identity);
+                        currentInputState.spawnedObj = g.gameObject;
+                        shadowCountdown = shadowTimer;
+                    }
+                    alreadySpawnedShadow = false;
                 }
                 inputStatesHistory.Add(new InputStates(currentInputState));
             }
