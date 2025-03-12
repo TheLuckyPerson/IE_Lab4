@@ -1,5 +1,6 @@
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,9 +16,12 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] RawImage speakerImage;
     [SerializeField] Texture2D fabianoMugshot;
     [SerializeField] Texture2D adelardMugshot;
+    [SerializeField] Texture2D wizardMugshot;
     private MonoBehaviour playerScript;
     public float typewriterDelay = 0.05f;
-    private bool isArmenian = false;
+    enum Language { Armenian, English, French};
+    private Language currentLanguage;
+    [SerializeField] bool isLevelCutscene = false;
 
     // We hold this coroutine in a variable so that we are able to set it to null to manipulate if the player wants to
     // double click to skip past the dialogue and just display the full message immediately
@@ -40,12 +44,12 @@ public class DialogueManager : MonoBehaviour
             StartCoroutine(WaitForCatIdle());
         } else if (SceneManager.GetActiveScene().name == "Ctsc2") {
             StartCoroutine(PlayCtsc2());
+        } else if (SceneManager.GetActiveScene().name == "Ctsc3")
+        {
+            StartCoroutine(FadeInCoroutine());
+            ShowMessage(desiredMessages);
         }
-        else if (SceneManager.GetActiveScene().name == "Lv 0" || 
-            SceneManager.GetActiveScene().name == "Lv 1" || 
-            SceneManager.GetActiveScene().name == "Lv 2" ||
-            SceneManager.GetActiveScene().name == "Lv 2.5" ||
-            SceneManager.GetActiveScene().name == "Lv 5") 
+        else if (isLevelCutscene) 
         {
             ShowMessage(desiredMessages);
             if (playerScript != null)
@@ -53,6 +57,7 @@ public class DialogueManager : MonoBehaviour
                 playerScript.enabled = false;
             }
         }
+        
     }
 
     private IEnumerator PlayCtsc2()
@@ -124,7 +129,9 @@ public class DialogueManager : MonoBehaviour
                 playerScript.enabled = true;
             }
 
-            if (SceneManager.GetActiveScene().name == "Ctsc1" || SceneManager.GetActiveScene().name == "Ctsc2")
+            if (SceneManager.GetActiveScene().name == "Ctsc1" || 
+                SceneManager.GetActiveScene().name == "Ctsc2" || 
+                SceneManager.GetActiveScene().name == "Ctsc3")
             {
                 StartCoroutine(FadeOutCoroutine());
             }
@@ -155,6 +162,24 @@ public class DialogueManager : MonoBehaviour
         SceneManager.LoadScene(buildIdx);
     }
 
+    private IEnumerator FadeInCoroutine()
+    {
+        float elapsedTime = 0f;
+        Color color = fadeImage.color;
+        fadeImage.color = new Color(color.r, color.g, color.b, 1f);
+
+        yield return new WaitForSeconds(1f);
+        while (elapsedTime < 1f)
+        {
+            elapsedTime += Time.deltaTime;
+            float alpha = Mathf.Clamp01(1f - (elapsedTime / 1f)); 
+            fadeImage.color = new Color(color.r, color.g, color.b, alpha);
+            yield return null;
+        }
+
+       
+    }
+
     private IEnumerator TypeText(string message)
     {
         text.text = "";
@@ -175,14 +200,19 @@ public class DialogueManager : MonoBehaviour
                     {
                         if (tag.Contains("FC6C85"))
                         {
-                            isArmenian = true;
+                            currentLanguage = Language.Armenian;
                             speakerImage.texture = fabianoMugshot;
                         }
                         else if (tag.Contains("5C62D6"))
                         {
-                            isArmenian = false;
+                            currentLanguage = Language.English;
                             speakerImage.texture = adelardMugshot;
+                        } else
+                        {
+                            currentLanguage = Language.French;
+                            speakerImage.texture = wizardMugshot;
                         }
+                        
                     }
 
                     i = closeTag + 1;
@@ -195,12 +225,17 @@ public class DialogueManager : MonoBehaviour
 
             if(char.IsLetter(letter))
             {
-                if (isArmenian)
+                switch (currentLanguage)
                 {
-                    SoundManager.instance.soundPlayLetterArmenian(letter);
-                } else
-                {
-                    SoundManager.instance.soundPlayLetterEnglish(letter);
+                    case Language.Armenian:
+                        SoundManager.instance.soundPlayLetterArmenian(letter);
+                        break;
+                    case Language.English:
+                        SoundManager.instance.soundPlayLetterEnglish(letter);
+                        break;
+                    case Language.French:
+                        SoundManager.instance.soundPlayLetterFrench(letter);
+                        break;
                 }
             }
 
@@ -210,4 +245,30 @@ public class DialogueManager : MonoBehaviour
         }
         displayCoroutine = null;
     }
+
+    public void SkipAllDialogue()
+    {
+        if (displayCoroutine != null)
+        {
+            StopCoroutine(displayCoroutine);
+        }
+
+        text.text = ""; 
+        number = words.Length; 
+
+        if (playerScript != null)
+        {
+            playerScript.enabled = true; 
+        }
+
+        DialogueSystem.SetActive(false);
+
+        if (SceneManager.GetActiveScene().name == "Ctsc1" ||
+            SceneManager.GetActiveScene().name == "Ctsc2" ||
+            SceneManager.GetActiveScene().name == "Ctsc3")
+        {
+            StartCoroutine(FadeOutCoroutine());
+        }
+    }
+
 }
