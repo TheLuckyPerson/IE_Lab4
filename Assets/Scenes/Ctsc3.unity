@@ -161,6 +161,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.4396582
       objectReference: {fileID: 0}
+    - target: {fileID: 735224061568584444, guid: faab2973dbe7f0249a537323960e4f6e, type: 3}
+      propertyPath: titleTextMesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 927542053209278844, guid: faab2973dbe7f0249a537323960e4f6e, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.size
       value: 2
@@ -3289,7 +3293,8 @@ PrefabInstance:
       propertyPath: playerAnimator
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 735224061568584444, guid: faab2973dbe7f0249a537323960e4f6e, type: 3}
     m_RemovedGameObjects:
     - {fileID: 3767075296413199352, guid: faab2973dbe7f0249a537323960e4f6e, type: 3}
     - {fileID: 6626856757119502372, guid: faab2973dbe7f0249a537323960e4f6e, type: 3}
