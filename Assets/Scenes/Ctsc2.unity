@@ -608,6 +608,10 @@ PrefabInstance:
       propertyPath: m_Simulated
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1197356080996700138, guid: e118eed328a450a4b93ce7e077a4ec0b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1981899990535292129, guid: e118eed328a450a4b93ce7e077a4ec0b, type: 3}
       propertyPath: m_LocalScale.x
       value: 4
