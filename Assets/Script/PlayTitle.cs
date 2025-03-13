@@ -29,5 +29,6 @@ public class PlayTitle : MonoBehaviour
                 dialogueIsInScene = false;
             }
         }
+        titleTextMesh.gameObject.SetActive(true);
     }
 }
