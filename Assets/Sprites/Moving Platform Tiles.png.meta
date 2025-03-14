@@ -127,7 +127,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 48
-        width: 16
+        width: 48
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -147,9 +147,9 @@ TextureImporter:
       name: Moving Platform Tiles_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 48
-        width: 16
+        x: 0
+        y: 32
+        width: 48
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -169,9 +169,9 @@ TextureImporter:
       name: Moving Platform Tiles_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 48
-        width: 16
+        x: 0
+        y: 16
+        width: 48
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -192,8 +192,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 16
+        y: 0
+        width: 48
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -205,182 +205,6 @@ TextureImporter:
       bones: []
       spriteID: ced6bc1e00f983ae0800000000000000
       internalID: -1569329644001595924
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Moving Platform Tiles_4
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f51686002bc31a040b35394b96e05db8
-      internalID: 814874960
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Moving Platform Tiles_5
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7190be8ab9d1afb49a61f36edd9d3bf7
-      internalID: 2003406936
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Moving Platform Tiles_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e90dc6c77cf36ff438049ad66ddca3f1
-      internalID: -403688032
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Moving Platform Tiles_7
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5bd6be4a76db952478e953500755d62f
-      internalID: -1304835467
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Moving Platform Tiles_8
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 41c409a3d72f2ac42ae123a9d9dd60c2
-      internalID: 206191942
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Moving Platform Tiles_9
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5110af85d756ed4aa71840749850ed5
-      internalID: 559820892
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Moving Platform Tiles_10
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f344b4d33ea63e419986868811ac1bd
-      internalID: -132243237
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Moving Platform Tiles_11
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 481fb1616ea294b4dade06c8ff9045c6
-      internalID: 1017842084
       vertices: []
       indices: 
       edges: []
@@ -401,16 +225,8 @@ TextureImporter:
     nameFileIdTable:
       Moving Platform Tiles_0: 5538553057915201100
       Moving Platform Tiles_1: -4848008132704229764
-      Moving Platform Tiles_10: -132243237
-      Moving Platform Tiles_11: 1017842084
       Moving Platform Tiles_2: -6293284731111360370
       Moving Platform Tiles_3: -1569329644001595924
-      Moving Platform Tiles_4: 814874960
-      Moving Platform Tiles_5: 2003406936
-      Moving Platform Tiles_6: -403688032
-      Moving Platform Tiles_7: -1304835467
-      Moving Platform Tiles_8: 206191942
-      Moving Platform Tiles_9: 559820892
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -5,6 +5,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioClip nextEffect;
     [SerializeField] AudioClip[] alphabetArmenian;
     [SerializeField] AudioClip[] alphabetEnglish;
+    [SerializeField] AudioClip[] alphabetFrench;
 
     [SerializeField] AudioSource dialogueSource;
 
@@ -44,6 +45,16 @@ public class SoundManager : MonoBehaviour
         if (index >= 0 && index < alphabetEnglish.Length)
         {
             dialogueSource.PlayOneShot(alphabetEnglish[index]);
+        }
+    }
+
+    public void soundPlayLetterFrench(char letter)
+    {
+        letter = char.ToLower(letter);
+        int index = letter - 'a';
+        if (index >= 0 && index < alphabetEnglish.Length)
+        {
+            dialogueSource.PlayOneShot(alphabetFrench[index]);
         }
     }
 }

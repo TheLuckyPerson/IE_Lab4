@@ -33,14 +33,32 @@ EditorBuildSettings:
     path: Assets/Scenes/Ctsc2.unity
     guid: 97c4db95afe5f1e40863110da0627b2d
   - enabled: 1
+    path: Assets/Scenes/Lv 4.unity
+    guid: 4ce046f27b84d4e48bdb5b6920557909
+  - enabled: 1
     path: Assets/Scenes/Lv 5.unity
     guid: 4039b33953a104d63960d22a5fdf466f
   - enabled: 1
-    path: Assets/Scenes/Lv6.unity
+    path: Assets/Scenes/Ctsc3.unity
+    guid: 733b9061461126a4992b3f1220dea0db
+  - enabled: 1
+    path: Assets/Scenes/Lv 6.unity
     guid: bf02722fc8ee847dfb4c805e913bead2
   - enabled: 1
-    path: Assets/Scenes/Lv7.unity
+    path: Assets/Scenes/Lv 7.unity
     guid: 5e691e54805b64988ab6667480364347
+  - enabled: 1
+    path: Assets/Scenes/Lv 8.unity
+    guid: 87940c491664f9a4ba653ca1194b279a
+  - enabled: 1
+    path: Assets/Scenes/Lv 9.unity
+    guid: 6451f31fa44d93a48b1f012e9517d8b8
+  - enabled: 1
+    path: Assets/Scenes/Lv 10.unity
+    guid: 386492ae7426e0b4282bde77696ea266
+  - enabled: 1
+    path: Assets/Scenes/Lv 11.unity
+    guid: 6b19c97b3bb4eb94ab9a186a084b22dd
   - enabled: 1
     path: Assets/Scenes/WinScreen.unity
     guid: 236ffd69846ca44189519aea0eae98c7
