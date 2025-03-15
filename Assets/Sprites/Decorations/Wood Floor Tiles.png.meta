@@ -178,6 +178,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Wood Floor Tiles_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c6fb23f489597c49a5d1da4201a40b0
+      internalID: 235375035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -195,6 +217,7 @@ TextureImporter:
       Wood Floor Tiles_0: 4587422795427921144
       Wood Floor Tiles_1: 411014
       Wood Floor Tiles_2: -2000234885
+      Wood Floor Tiles_3: 235375035
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
