@@ -689,17 +689,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level Design: Baylor Pond, Tyler Le
+  m_text: 'Level Design: Baylor Pond, Tyler Le, Jeffer Ng
 
     Art: Sigourney Scott
 
     Sound:
-    Tyler Le, Sigourney Scott
+    Tyler Le, Christopher Grigorian, Sigourney Scott
 
-    Programming: Tyler Le
+    Music: Christopher Grigorian,
+    AmarantaMusic on pixabay(for main menu)
 
-    Music: AmarantaMusic
-    on pixabay'
+    Programming: Tyler Le, Jeffer Ng,
+    Baylor Pond
+
+    Story: Christopher Grigorian'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -726,8 +729,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -973,7 +976,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: e43b835aa6a6b5c418b5de7d15cea306, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1

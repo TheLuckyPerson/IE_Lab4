@@ -128,7 +128,7 @@ public class PlayerScript : MonoBehaviour
                 alreadySpawnedShadow = true;
                 GameObject g = Instantiate(shadowHistoryPrefab, transform.position + shadowHistoryOffset, Quaternion.identity);
                 SpriteRenderer r = g.GetComponent<SpriteRenderer>();
-                r.color = Color.green;
+                r.color = Color.black;
                 currentInputState.spawnedObj = g.gameObject;
                 shadowCountdown = shadowTimer;
             }
@@ -245,11 +245,11 @@ public class PlayerScript : MonoBehaviour
             // transform.position = new Vector3(transform.position.x, hit.point.y + .5f);
             parentVector = rbTarget.linearVelocity;
             // transform.parent = rbTarget.transform;
-            rb2d.mass = 1f;
+            //rb2d.mass = 1f;
         }
         else
         {
-            rb2d.mass = 1f;
+            //rb2d.mass = 1f;
             transform.parent = null;
             parentVector = Vector2.zero;
         }
@@ -356,7 +356,11 @@ public class PlayerScript : MonoBehaviour
             additive.y = rb2d.linearVelocity.y;
         }
 
-        rb2d.linearVelocity = new Vector2(xDir * speed + additive.x, additive.y);
+        if (rb2d.linearVelocity == Vector2.zero) { 
+            rb2d.linearVelocity = new Vector2(xDir * speed + additive.x, additive.y);
+        } else {
+            rb2d.linearVelocity = new Vector2(xDir * speed, rb2d.linearVelocity.y);
+        }
 
     }
 

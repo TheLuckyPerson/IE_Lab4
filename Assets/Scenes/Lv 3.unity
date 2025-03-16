@@ -440,7 +440,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1054215340297721827, guid: be1516a2b6ba5dd4bb468e1166dffe70, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2304716642572617815, guid: be1516a2b6ba5dd4bb468e1166dffe70, type: 3}
       propertyPath: m_text
@@ -693,6 +693,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 735224061568584444, guid: faab2973dbe7f0249a537323960e4f6e, type: 3}
+      propertyPath: titleTextStr
+      value: Death is Not Always The End
+      objectReference: {fileID: 0}
     - target: {fileID: 927542053209278844, guid: faab2973dbe7f0249a537323960e4f6e, type: 3}
       propertyPath: m_ColliderPaths.Array.size
       value: 1

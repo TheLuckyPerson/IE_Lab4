@@ -1383,6 +1383,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 735224061568584444, guid: faab2973dbe7f0249a537323960e4f6e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 735224061568584444, guid: faab2973dbe7f0249a537323960e4f6e, type: 3}
       propertyPath: titleTextStr
       value: Smack the Button
       objectReference: {fileID: 0}

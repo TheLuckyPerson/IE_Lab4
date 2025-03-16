@@ -7,6 +7,9 @@ public class Door : Buttonable
     void Start()
     {
         animator = GetComponent<Animator>();
+        if(reverseActivation) {
+            TriggerTurnOff();
+        }
     }
 
     public override void TurnOn()

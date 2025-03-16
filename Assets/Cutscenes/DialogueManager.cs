@@ -21,12 +21,13 @@ public class DialogueManager : MonoBehaviour
     public float typewriterDelay = 0.05f;
     enum Language { Armenian, English, French};
     private Language currentLanguage;
-    [SerializeField] bool isLevelCutscene = false;
+    [SerializeField] public bool isLevelCutscene = false;
 
     // We hold this coroutine in a variable so that we are able to set it to null to manipulate if the player wants to
     // double click to skip past the dialogue and just display the full message immediately
     private Coroutine displayCoroutine;
     private string currentFullMessage;
+    public bool finishedLevel = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -143,6 +144,7 @@ public class DialogueManager : MonoBehaviour
                 
             }
             DialogueSystem.SetActive(false);
+            finishedLevel = true;
         }
     }
 
@@ -269,6 +271,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         DialogueSystem.SetActive(false);
+        finishedLevel = true;
 
         if (SceneManager.GetActiveScene().name == "Ctsc1" ||
             SceneManager.GetActiveScene().name == "Ctsc2" ||
