@@ -67,6 +67,7 @@
     <Compile Include="Assets\Script\Door.cs" />
     <Compile Include="Assets\Script\PlayTitle.cs" />
     <Compile Include="Assets\Script\LoadScene.cs" />
+    <Compile Include="Assets\Script\AudioAdjuster.cs" />
     <Compile Include="Assets\Cutscenes\SoundManager.cs" />
     <Compile Include="Assets\Script\Button.cs" />
     <Compile Include="Assets\Cutscenes\Ctsc2Play.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\Script\Lever.cs" />
     <Compile Include="Assets\Script\ShadowHistory.cs" />
     <Compile Include="Assets\Script\PlayerScript.cs" />
+    <Compile Include="Assets\Script\GlobalAudio.cs" />
     <Compile Include="Assets\Script\WinPanel.cs" />
     <Compile Include="Assets\Script\MovingPlatform.cs" />
   </ItemGroup>

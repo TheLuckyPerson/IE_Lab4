@@ -46,6 +46,7 @@ public class DialogueManager : MonoBehaviour
             StartCoroutine(PlayCtsc2());
         } else if (SceneManager.GetActiveScene().name == "Ctsc3")
         {
+            GlobalAudio.GetInstance().StopMusic();
             StartCoroutine(FadeInCoroutine());
             ShowMessage(desiredMessages);
         }
@@ -63,15 +64,20 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator PlayCtsc2()
     {
         Ctsc2Play.instance.isPanningCamera = true;
+        GlobalAudio.GetInstance().PlayMusic(GlobalAudio.GetInstance().drumRoll);
         yield return new WaitForSeconds(3f);
+        GlobalAudio.GetInstance().StopMusic();
         ShowMessage(desiredMessages);
     }
 
     private IEnumerator WaitForCatIdle()
     {
         Ctsc1Play.instance.catAnimation = true;
+        GlobalAudio.GetInstance().SetVolume(0.5f);
+        GlobalAudio.GetInstance().PlayMusic(GlobalAudio.GetInstance().drumRoll);
         yield return new WaitUntil(() => Ctsc1Play.instance.CatIsIdle);
         Ctsc1Play.instance.catAnimation = false;
+        GlobalAudio.GetInstance().StopMusic();
         yield return new WaitForSeconds(1.5f);
         ShowMessage(desiredMessages);
     }
@@ -134,6 +140,7 @@ public class DialogueManager : MonoBehaviour
                 SceneManager.GetActiveScene().name == "Ctsc3")
             {
                 StartCoroutine(FadeOutCoroutine());
+                
             }
             DialogueSystem.SetActive(false);
         }
