@@ -6,14 +6,17 @@ public class PlayTitle : MonoBehaviour
     public TextMeshProUGUI titleTextMesh;
     public string titleTextStr;
     private bool dialogueIsInScene = false;
-    public DialogueManager dialogueContainer;
-    private GameObject dialogueBox;
+    private DialogueManager dialogueContainer = null;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         titleTextMesh.text = titleTextStr;
-        dialogueContainer = GameObject.FindGameObjectWithTag("Dialogue").GetComponent<DialogueManager>();
-        if (dialogueContainer.isLevelCutscene)
+        GameObject g = GameObject.FindGameObjectWithTag("Dialogue");
+        if(g) {
+            dialogueContainer = g.GetComponent<DialogueManager>(); 
+        }
+
+        if (dialogueContainer && dialogueContainer.isLevelCutscene)
         {
             dialogueIsInScene = true;
         }

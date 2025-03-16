@@ -356,7 +356,7 @@ public class PlayerScript : MonoBehaviour
             additive.y = rb2d.linearVelocity.y;
         }
 
-        if (rb2d.linearVelocity == Vector2.zero) { 
+        if (rb2d.linearVelocity == Vector2.zero || rb2d.linearVelocity == additive) { 
             rb2d.linearVelocity = new Vector2(xDir * speed + additive.x, additive.y);
         } else {
             rb2d.linearVelocity = new Vector2(xDir * speed, rb2d.linearVelocity.y);
