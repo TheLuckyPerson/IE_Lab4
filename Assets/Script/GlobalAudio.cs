@@ -48,6 +48,7 @@ public class GlobalAudio : MonoBehaviour
     public void StopMusic()
     {
         audioSource.Stop();
+        audioSource.clip = null;
     }
 
     public static GlobalAudio GetInstance()
