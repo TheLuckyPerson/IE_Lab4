@@ -60,6 +60,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Lv 11.unity
     guid: 6b19c97b3bb4eb94ab9a186a084b22dd
   - enabled: 1
+    path: Assets/Scenes/Cat Lv 1.unity
+    guid: 4c78d2107cc58442f849b95cfb89a8b0
+  - enabled: 1
+    path: Assets/Scenes/Cat Lv 2.unity
+    guid: 370ebaacd70f948cda7fa9c012e54f01
+  - enabled: 1
+    path: Assets/Scenes/Cat Lv 3.unity
+    guid: 5f52d17686ee6445584cc56fdcc68cf4
+  - enabled: 1
+    path: Assets/Scenes/Cat Lv 4.unity
+    guid: 5cb1901ebb83c41f38ca8538f420893d
+  - enabled: 1
+    path: Assets/Scenes/Cat Lv 5.unity
+    guid: 189d5169f9de14238b2eaad498e507bd
+  - enabled: 1
     path: Assets/Scenes/WinScreen.unity
     guid: 236ffd69846ca44189519aea0eae98c7
   m_configObjects: {}
