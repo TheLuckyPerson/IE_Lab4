@@ -28,8 +28,8 @@ public class Ctsc1Play : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       animator = catPuppet.GetComponent<Animator>();
-       animator.Play("Run");
+        animator = catPuppet.GetComponent<Animator>();
+        animator.Play("Run");
     }
 
     // Update is called once per frame

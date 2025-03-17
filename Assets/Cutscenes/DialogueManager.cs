@@ -11,7 +11,7 @@ public class DialogueManager : MonoBehaviour
 {
     public TMP_Text text;
     public GameObject DialogueSystem;
-    [SerializeField] [TextArea] string desiredMessages;
+    [SerializeField][TextArea] string desiredMessages;
     [SerializeField] Image fadeImage;
     [SerializeField] RawImage speakerImage;
     [SerializeField] Texture2D fabianoMugshot;
@@ -19,7 +19,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] Texture2D wizardMugshot;
     private MonoBehaviour playerScript;
     public float typewriterDelay = 0.05f;
-    enum Language { Armenian, English, French};
+    enum Language { Armenian, English, French };
     private Language currentLanguage;
     [SerializeField] public bool isLevelCutscene = false;
 
@@ -43,19 +43,23 @@ public class DialogueManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Ctsc1")
         {
             StartCoroutine(WaitForCatIdle());
-        } else if (SceneManager.GetActiveScene().name == "Ctsc2") {
+        }
+        else if (SceneManager.GetActiveScene().name == "Ctsc2")
+        {
             StartCoroutine(PlayCtsc2());
-        } else if (SceneManager.GetActiveScene().name == "Ctsc3")
+        }
+        else if (SceneManager.GetActiveScene().name == "Ctsc3")
         {
             GlobalAudio.GetInstance().StopMusic();
             StartCoroutine(FadeInCoroutine());
             ShowMessage(desiredMessages);
-        } else if (SceneManager.GetActiveScene().name == "Ctsc4")
+        }
+        else if (SceneManager.GetActiveScene().name == "Ctsc4")
         {
             GlobalAudio.GetInstance().PlayMusic(GlobalAudio.GetInstance().drumRoll);
             StartCoroutine(PlayCtsc4());
         }
-        else if (isLevelCutscene) 
+        else if (isLevelCutscene)
         {
             ShowMessage(desiredMessages);
             if (playerScript != null)
@@ -63,7 +67,7 @@ public class DialogueManager : MonoBehaviour
                 playerScript.enabled = false;
             }
         }
-        
+
     }
 
     private IEnumerator PlayCtsc4()
@@ -126,12 +130,12 @@ public class DialogueManager : MonoBehaviour
     string[] words;
     int number;
     public void ShowMessage(string Message)
-    { 
+    {
         // Initially prompts the display of the first message in the star
         number = 0;
         words = Message.Split(',');
         DialogueSystem.SetActive(true);
- 
+
         Skip();
     }
 
@@ -144,12 +148,14 @@ public class DialogueManager : MonoBehaviour
             if (number == 6 && SceneManager.GetActiveScene().name == "Ctsc4")
             {
                 Ctsc4Play.instance.runTimeRight = true;
-            } else if (number == 9 && SceneManager.GetActiveScene().name == "Ctsc4")
+            }
+            else if (number == 9 && SceneManager.GetActiveScene().name == "Ctsc4")
             {
                 Ctsc4Play.instance.runAndJump = true;
             }
             number += 1;
-        } else
+        }
+        else
         {
             number = 0;
             if (playerScript != null)
@@ -157,13 +163,13 @@ public class DialogueManager : MonoBehaviour
                 playerScript.enabled = true;
             }
 
-            if (SceneManager.GetActiveScene().name == "Ctsc1" || 
-                SceneManager.GetActiveScene().name == "Ctsc2" || 
+            if (SceneManager.GetActiveScene().name == "Ctsc1" ||
+                SceneManager.GetActiveScene().name == "Ctsc2" ||
                 SceneManager.GetActiveScene().name == "Ctsc3" ||
                 SceneManager.GetActiveScene().name == "Ctsc4")
             {
                 StartCoroutine(FadeOutCoroutine());
-                
+
             }
             DialogueSystem.SetActive(false);
             finishedLevel = true;
@@ -203,12 +209,12 @@ public class DialogueManager : MonoBehaviour
         while (elapsedTime < 1f)
         {
             elapsedTime += Time.deltaTime;
-            float alpha = Mathf.Clamp01(1f - (elapsedTime / 1f)); 
+            float alpha = Mathf.Clamp01(1f - (elapsedTime / 1f));
             fadeImage.color = new Color(color.r, color.g, color.b, alpha);
             yield return null;
         }
 
-       
+
     }
 
     private IEnumerator TypeText(string message)
@@ -238,12 +244,13 @@ public class DialogueManager : MonoBehaviour
                         {
                             currentLanguage = Language.English;
                             speakerImage.texture = adelardMugshot;
-                        } else
+                        }
+                        else
                         {
                             currentLanguage = Language.French;
                             speakerImage.texture = wizardMugshot;
                         }
-                        
+
                     }
 
                     i = closeTag + 1;
@@ -254,7 +261,7 @@ public class DialogueManager : MonoBehaviour
             char letter = message[i];
             text.text += letter;
 
-            if(char.IsLetter(letter))
+            if (char.IsLetter(letter))
             {
                 switch (currentLanguage)
                 {
@@ -284,12 +291,12 @@ public class DialogueManager : MonoBehaviour
             StopCoroutine(displayCoroutine);
         }
 
-        text.text = ""; 
-        number = words.Length; 
+        text.text = "";
+        number = words.Length;
 
         if (playerScript != null)
         {
-            playerScript.enabled = true; 
+            playerScript.enabled = true;
         }
 
         DialogueSystem.SetActive(false);
