@@ -9,6 +9,9 @@ public class SoundManager : MonoBehaviour
 
     [SerializeField] AudioSource dialogueSource;
 
+    [SerializeField] AudioClip jumpEffect;
+    [SerializeField] AudioClip coinEffect;
+
     public static SoundManager instance;
 
     private void Awake()
@@ -27,7 +30,14 @@ public class SoundManager : MonoBehaviour
     {
         dialogueSource.PlayOneShot(nextEffect);
     }
-
+    public void soundJump()
+    {
+        dialogueSource.PlayOneShot(jumpEffect);
+    }
+    public void soundCoin()
+    {
+        dialogueSource.PlayOneShot(coinEffect);
+    }
     public void soundPlayLetterArmenian(char letter)
     {
         letter = char.ToLower(letter);

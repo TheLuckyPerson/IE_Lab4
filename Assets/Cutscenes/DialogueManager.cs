@@ -50,6 +50,10 @@ public class DialogueManager : MonoBehaviour
             GlobalAudio.GetInstance().StopMusic();
             StartCoroutine(FadeInCoroutine());
             ShowMessage(desiredMessages);
+        } else if (SceneManager.GetActiveScene().name == "Ctsc4")
+        {
+            GlobalAudio.GetInstance().PlayMusic(GlobalAudio.GetInstance().drumRoll);
+            StartCoroutine(PlayCtsc4());
         }
         else if (isLevelCutscene) 
         {
@@ -60,6 +64,16 @@ public class DialogueManager : MonoBehaviour
             }
         }
         
+    }
+
+    private IEnumerator PlayCtsc4()
+    {
+
+        Ctsc4Play.instance.slideAnimation = true;
+        yield return new WaitForSeconds(2f);
+        Ctsc4Play.instance.slideAnimation = false;
+        GlobalAudio.GetInstance().StopMusic();
+        ShowMessage(desiredMessages);
     }
 
     private IEnumerator PlayCtsc2()
@@ -127,6 +141,13 @@ public class DialogueManager : MonoBehaviour
         {
             currentFullMessage = words[number];
             displayCoroutine = StartCoroutine(TypeText(currentFullMessage));
+            if (number == 6 && SceneManager.GetActiveScene().name == "Ctsc4")
+            {
+                Ctsc4Play.instance.runTimeRight = true;
+            } else if (number == 9 && SceneManager.GetActiveScene().name == "Ctsc4")
+            {
+                Ctsc4Play.instance.runAndJump = true;
+            }
             number += 1;
         } else
         {
@@ -138,7 +159,8 @@ public class DialogueManager : MonoBehaviour
 
             if (SceneManager.GetActiveScene().name == "Ctsc1" || 
                 SceneManager.GetActiveScene().name == "Ctsc2" || 
-                SceneManager.GetActiveScene().name == "Ctsc3")
+                SceneManager.GetActiveScene().name == "Ctsc3" ||
+                SceneManager.GetActiveScene().name == "Ctsc4")
             {
                 StartCoroutine(FadeOutCoroutine());
                 
@@ -275,7 +297,8 @@ public class DialogueManager : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "Ctsc1" ||
             SceneManager.GetActiveScene().name == "Ctsc2" ||
-            SceneManager.GetActiveScene().name == "Ctsc3")
+            SceneManager.GetActiveScene().name == "Ctsc3" ||
+            SceneManager.GetActiveScene().name == "Ctsc4")
         {
             StartCoroutine(FadeOutCoroutine());
         }

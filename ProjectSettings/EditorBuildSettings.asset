@@ -60,6 +60,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Lv 14.unity
     guid: 5e691e54805b64988ab6667480364347
   - enabled: 1
+    path: Assets/Scenes/Ctsc4.unity
+    guid: 7688c9b59b50cc642acbc056d2ee2473
+  - enabled: 1
     path: Assets/Scenes/WinScreen.unity
     guid: 236ffd69846ca44189519aea0eae98c7
   - enabled: 1

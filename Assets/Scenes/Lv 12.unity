@@ -202,11 +202,10 @@ PrefabInstance:
       objectReference: {fileID: 1144673841}
     - target: {fileID: 1950288825850090947, guid: 5467aa216efe4d74c8c76a31b8ac8c09, type: 3}
       propertyPath: desiredMessages
-      value: <color=#FC6C85>Similar to the last trick sometimes I'll have to jump
-        on Adelard's shoulders to reach the gold. Make sure to press jump when you
-        would want me to and I'll follow your lead!</color>,<color=#FC6C85>Also Adelard
-        - it's important to remember that no matter your positioning I'll remember
-        and copy all of your inputs.</color>
+      value: <color=#FC6C85>I'll have to jump on your shoulders Adelard to reach
+        the gold. Make sure to press jump when you would want me to and I'll follow
+        your lead!</color>,<color=#FC6C85>Also Adelard - it's important to remember
+        that no matter your positioning I'll remember and copy all of your inputs.</color>
       objectReference: {fileID: 0}
     - target: {fileID: 1950288825850090947, guid: 5467aa216efe4d74c8c76a31b8ac8c09, type: 3}
       propertyPath: isLevelCutscene
