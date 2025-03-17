@@ -588,6 +588,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 3.12
       objectReference: {fileID: 0}
+    - target: {fileID: 735224061568584444, guid: faab2973dbe7f0249a537323960e4f6e, type: 3}
+      propertyPath: titleTextStr
+      value: Watch Your Step
+      objectReference: {fileID: 0}
     - target: {fileID: 927542053209278844, guid: faab2973dbe7f0249a537323960e4f6e, type: 3}
       propertyPath: m_ColliderPaths.Array.size
       value: 1
